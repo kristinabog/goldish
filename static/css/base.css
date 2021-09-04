@@ -1,0 +1,77 @@
+html {
+    height: 100%;
+    font-family: 'Cardo';
+    background-color: #fafaf9;
+}
+
+/* from Bulma */
+.fas,
+.far {
+    color: black;
+}
+
+.home-container {
+    background: url('/media/home-img1.png') no-repeat center center fixed;
+    background-size: cover;
+
+    height: 100vh;
+}
+
+.icon {
+    align-items: center;
+    display: inline-flex;
+    justify-content: center;
+    height: 1.5rem;
+    width: 1.5rem;
+    color: #c98d26;
+}
+
+.price-cart {
+    font-size: 10px;
+    color: #c98d26;
+}
+
+.logo-link {
+    width: fit-content;
+    font-family: 'Lora';
+    font-size: 3rem;
+    color: #c98d26;
+}
+
+.uppercase {
+    text-transform: uppercase;
+}
+
+#navbar-1 {
+    height: 50px;
+    background-color: #fafaf9;
+}
+
+#navbar-2 {
+    background-color: rgb(241, 239, 235);
+    height: 130px;
+}
+
+/* -------------------------------- Media Queries */
+
+/* Slightly larger container on xl screens */
+@media (min-width: 1200px) {
+    .container {
+      max-width: 80%;
+    }
+  }
+  
+  /* fixed top navbar only on medium and up */
+  @media (min-width: 992px) {
+      .fixed-top-desktop-only {
+          position: fixed;
+          top: 0;
+          right: 0;
+          left: 0;
+          z-index: 1030;
+      }
+  
+      .header-container {
+        padding-top: 134px;
+    }
+  }
