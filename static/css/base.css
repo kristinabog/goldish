@@ -1,6 +1,6 @@
 html {
     height: 100%;
-    font-family: 'Cardo';
+    font-family: 'Cardo', sans-serif;
     background-color: #fafaf9;
 }
 
@@ -60,15 +60,23 @@ html {
 }
 
 #logo-col {
-    margin-left: 10rem;
+    margin-left: 12rem;
 }
 
 #logo {
-    font-family: 'Lora';
+    font-family: 'Lora', sans-serif;
     font-size: 3rem;
     color: #c98d26;
 }
 
+#nav2-links-col {
+    font-family: 'Cardo', sans-serif;
+    letter-spacing: 0.6px;
+}
+
+div#nav2-links-col li.list-inline-item:not(:last-child) {
+    margin-right: 1.5rem;
+}
 
 /* home */
 
