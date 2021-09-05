@@ -31,12 +31,22 @@ html {
 }
 
 .search-input {
-    border-right: 0;
+    border: 0;
+    background: transparent;
+    border-bottom-color: black;
+    border-bottom-style: solid;
+    border-bottom-width: 1px;
+    max-width: 12rem;
+    font-family: 'Cardo';
+    padding: 2px 0 0 0;
+    font-size: 14px;
+
 }
 
 .search-icon {
-    border-left:0 solid transparent;
-    background:transparent;
+    border: 0 transparent;
+    background: transparent;
+    padding: 0;
 }
 
 .nav-text {
