@@ -4,26 +4,11 @@ html {
     background-color: #fafaf9;
 }
 
-/* from Bulma */
+/* navbar */
+
 .fas,
 .far {
     color: black;
-}
-
-.home-container {
-    background: url('/media/home-img1.png') no-repeat center center fixed;
-    background-size: cover;
-
-    height: 100vh;
-}
-
-.icon {
-    align-items: center;
-    display: inline-flex;
-    justify-content: center;
-    height: 1.5rem;
-    width: 1.5rem;
-    color: #c98d26;
 }
 
 .search-bar {
@@ -53,22 +38,10 @@ html {
     font-size: 10px;
     color: #c98d26;
     font-weight: 600;
-    text-transform: uppercase;
 }
 
 .nav-link { 
     padding: 0.4rem 0.4rem 0rem 0.4rem;
-}
-
-.logo-link {
-    width: fit-content;
-    font-family: 'Lora';
-    font-size: 3rem;
-    color: #c98d26;
-}
-
-.uppercase {
-    text-transform: uppercase;
 }
 
 #navbar-1 {
@@ -80,6 +53,32 @@ html {
     background-color: rgb(241, 239, 235);
     height: 130px;
 }
+
+.logo-link {
+    width: fit-content;
+    padding-bottom: 10px;
+}
+
+#logo-col {
+    margin-left: 10rem;
+}
+
+#logo {
+    font-family: 'Lora';
+    font-size: 3rem;
+    color: #c98d26;
+}
+
+
+/* home */
+
+.home-container {
+    background: url('/media/home-img1.png') no-repeat center center fixed;
+    background-size: cover;
+
+    height: 100vh;
+}
+
 
 /* -------------------------------- Media Queries */
 
