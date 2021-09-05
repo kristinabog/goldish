@@ -4,7 +4,9 @@ html {
     background-color: #fafaf9;
 }
 
-/* navbar */
+/*----------------------------navbar */
+
+/* navbar1 */
 
 .fas,
 .far {
@@ -49,6 +51,8 @@ html {
     background-color: #fafaf9;
 }
 
+/* navbar 2 */
+
 #navbar-2 {
     background-color: rgb(241, 239, 235);
     height: 130px;
@@ -78,7 +82,37 @@ div#nav2-links-col li.list-inline-item:not(:last-child) {
     margin-right: 1.5rem;
 }
 
-/* home */
+/* h1 & Button on home page */
+
+.shop-now-button {
+    background: black;
+    color: #c98d26;
+    min-width: 260px;
+    font-family:'Cardo';
+}
+
+.btn-black {
+    background: black;
+    color: #c98d26;
+}
+
+.shop-now-button:hover,
+.shop-now-button:active,
+.shop-now-button:focus,
+.btn-black:hover,
+.btn-black:active,
+.btn-black:focus {
+    background: #222;
+    color: white;
+}
+
+.home-h1 {
+    font-size: 2rem;
+    font-family: 'Cardo', sans-serif;
+    color: black;
+}
+
+/*------------------------- home */
 
 .home-container {
     background: url('/media/home-img1.png') no-repeat center center fixed;
@@ -108,6 +142,6 @@ div#nav2-links-col li.list-inline-item:not(:last-child) {
       }
   
       .header-container {
-        padding-top: 134px;
+        padding-top: 150px;
     }
   }
