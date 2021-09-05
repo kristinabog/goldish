@@ -36,13 +36,13 @@
   <body>
     <header class="container-fluid fixed-top">
     <div class="row" id="navbar-1">
-        <div class="col-12 col-lg-4 my-auto py-1 py-lg-0">
+        <div class="col-3 py-1 py-lg-0 search-bar">
             <form method="GET" action="">
-                <div class="input-group w-100">
+                <div class="input-group w-100 search-input">
                     <input class="form-control rounded-0" type="text" name="q" placeholder="What are you looking for?">
                     <div class="input-group-append">
                         <button class="form-control" type="submit">
-                            <span class="icon">
+                            <span class="icon search-icon">
                                 <i class="fas fa-search"></i>
                             </span>
                         </button>
@@ -50,12 +50,15 @@
                 </div>
             </form>
         </div>
-        <div class="col-12 col-lg-4 my-auto py-1 py-lg-0">
+        <div class="col-9 my-auto py-1 py-lg-0">
             <ul class="list-inline list-unstyled text-center text-lg-right my-auto">
                 <li class="list-inline-item dropdown">
                     <a class="text-black nav-link" href="#" id="user-options" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                         <div class="text-center">
-                            <p>My Account</p>
+                            <div><i class="fas fa-user fa-lg"></i></div>
+                            <p class="nav-text">
+                                Log In
+                            </p>
                         </div>
                     </a>
                     <div class="dropdown-menu border-0" aria-labelledby="user-options">
@@ -75,7 +78,7 @@
                     <a class="{% if grand_total %}text-info font-weight-bold{% else %}text-black{% endif %} nav-link" href="">
                         <div class="text-center">
                             <div><i class="fas fa-shopping-bag fa-lg"></i></div>
-                            <p class="price-cart my-0">
+                            <p class="price-cart my-0 nav-text">
                                 {% if grand_total %}
                                     ${{ grand_total|floatformat:2 }}
                                 {% else %}

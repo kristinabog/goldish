@@ -26,9 +26,28 @@ html {
     color: #c98d26;
 }
 
-.price-cart {
+.search-bar {
+    margin-top: 5px;
+}
+
+.search-input {
+    border-right: 0;
+}
+
+.search-icon {
+    border-left:0 solid transparent;
+    background:transparent;
+}
+
+.nav-text {
     font-size: 10px;
     color: #c98d26;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.nav-link { 
+    padding: 0.4rem 0.4rem 0rem 0.4rem;
 }
 
 .logo-link {
