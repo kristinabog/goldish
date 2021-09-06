@@ -89,6 +89,7 @@ div#nav2-links-col li.list-inline-item:not(:last-child) {
     color: #c98d26;
     min-width: 260px;
     font-family:'Cardo';
+    margin-top: 1rem;
 }
 
 .btn-black {
@@ -110,8 +111,48 @@ div#nav2-links-col li.list-inline-item:not(:last-child) {
     font-size: 2rem;
     font-family: 'Cardo', sans-serif;
     color: black;
+    text-align: center;
 }
 
+div.home-h1 .h1, h1 {
+    font-size: 1.6rem;
+    font-weight: 600;
+}
+
+/* Code credit https://blog.hubspot.com/website/css-fade-in */
+.fade-in-text {
+    display: inline-block;
+    animation: fadeIn linear 3s;
+    -webkit-animation: fadeIn linear 3s;
+    -moz-animation: fadeIn linear 3s;
+    -o-animation: fadeIn linear 3s;
+    -ms-animation: fadeIn linear 3s;
+  }
+  
+  @keyframes fadeIn {
+    0% {opacity:0;}
+    100% {opacity:1;}
+  }
+  
+  @-moz-keyframes fadeIn {
+    0% {opacity:0;}
+    100% {opacity:1;}
+  }
+  
+  @-webkit-keyframes fadeIn {
+    0% {opacity:0;}
+    100% {opacity:1;}
+  }
+  
+  @-o-keyframes fadeIn {
+    0% {opacity:0;}
+    100% {opacity:1;}
+  }
+  
+  @-ms-keyframes fadeIn {
+    0% {opacity:0;}
+    100% {opacity:1;}
+  }
 /*------------------------- home */
 
 .home-container {
