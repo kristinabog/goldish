@@ -7,7 +7,6 @@ html {
 /*----------------------------navbar */
 
 #logo,
-.discover-button,
 .btn-black {
     color: #ad7006;
 }
@@ -89,11 +88,17 @@ div#nav2-links-col li.list-inline-item:not(:last-child) {
 
 /* h1 & Button on home page */
 
+div.home-h1 .h1, h1 {
+    letter-spacing: 0.6px;
+}
+
 .discover-button {
     background: black;
     min-width: 260px;
     font-family:'Cardo';
     margin-top: 1rem;
+    color: rgb(219 203 190);
+    letter-spacing: 1px;
 }
 
 .btn-black {
@@ -159,7 +164,10 @@ div.home-h1 .h1, h1 {
 /*------------------------- home */
 
 .home-container {
-    background: url('/media/home-img.png') no-repeat center center fixed;
+    background: 
+    linear-gradient(rgb(61 59 59 / 40%), rgb(199 185 185 / 40%)),
+    url('/media/home-img.png'),
+    no-repeat center center fixed;
     background-size: cover;
 
     height: 100vh;
