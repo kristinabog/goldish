@@ -6,6 +6,12 @@ html {
 
 /*----------------------------navbar */
 
+#logo,
+.discover-button,
+.btn-black {
+    color: #ad7006;
+}
+
 /* navbar1 */
 
 .fas,
@@ -38,8 +44,8 @@ html {
 
 .nav-text {
     font-size: 10px;
-    color: #c98d26;
     font-weight: 600;
+    color: #9b6507;
 }
 
 .nav-link { 
@@ -70,7 +76,6 @@ html {
 #logo {
     font-family: 'Lora', sans-serif;
     font-size: 3rem;
-    color: #c98d26;
 }
 
 #nav2-links-col {
@@ -84,9 +89,8 @@ div#nav2-links-col li.list-inline-item:not(:last-child) {
 
 /* h1 & Button on home page */
 
-.shop-now-button {
+.discover-button {
     background: black;
-    color: #c98d26;
     min-width: 260px;
     font-family:'Cardo';
     margin-top: 1rem;
@@ -94,15 +98,14 @@ div#nav2-links-col li.list-inline-item:not(:last-child) {
 
 .btn-black {
     background: black;
-    color: #c98d26;
 }
 
-.shop-now-button:hover,
-.shop-now-button:active,
-.shop-now-button:focus,
-.btn-black:hover,
-.btn-black:active,
-.btn-black:focus {
+.discover-button:hover,
+.discover-button:active,
+.discover-button:focus,
+.discover-black:hover,
+.discover-black:active,
+.discover-black:focus {
     background: #222;
     color: white;
 }
@@ -156,7 +159,7 @@ div.home-h1 .h1, h1 {
 /*------------------------- home */
 
 .home-container {
-    background: url('/media/home-img1.png') no-repeat center center fixed;
+    background: url('/media/home-img.png') no-repeat center center fixed;
     background-size: cover;
 
     height: 100vh;
