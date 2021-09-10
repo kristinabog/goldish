@@ -77,12 +77,12 @@ html {
     font-size: 3rem;
 }
 
-#nav2-links-col {
+#nav2-links {
     font-family: 'Cardo', sans-serif;
     letter-spacing: 0.6px;
 }
 
-div#nav2-links-col li.list-inline-item:not(:last-child) {
+div#nav2-links a.nav-link {
     margin-right: 1.5rem;
 }
 

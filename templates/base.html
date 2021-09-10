@@ -37,7 +37,7 @@
   <body>
     <header class="container-fluid fixed-top">
     <!-- Navbar 1 -->
-        <div class="row" id="navbar-1">
+        <div class="row pt-lg-2 d-none d-lg-flex" id="navbar-1">
             <div class="col-3 py-1 py-lg-0 search-bar">
                 <form method="GET" action="">
                     <div class="input-group">
@@ -94,32 +94,21 @@
             </div>
         </div>
     <!-- Navbar 1 -->
-        <div id="navbar-2" class="row pt-lg-2 d-none d-lg-flex">
+    <!-- Navbar 2-->
+        <nav id="navbar-2" class="row navbar navbar-expand-lg pt-lg-2 d-lg-flex">
             <div class="col-12 col-lg-4 my-auto text-center" id="logo-col">
                 <a href="{% url 'home' %}" class="nav-link logo-link">
                     <h2 class="my-0" id="logo"><strong>goldish.</strong></h2>
                 </a>
             </div>
-            <div class="col-lg-6 my-auto" id="nav2-links-col">
-                <ul class="list-inline list-unstyled text-center text-lg-right my-auto text-uppercase">
-                    <li class="list-inline-item">
-                        <a>All Products</a>
-                    </li>
-                    <li class="list-inline-item">
-                        <a>Necklaces</a>
-                    </li>
-                    <li class="list-inline-item">
-                        <a>Bracelets</a>
-                    </li>
-                    <li class="list-inline-item">
-                        <a>Earrings</a>
-                    </li>
-                    <li class="list-inline-item">
-                        <a>Rings</a>
-                    </li>
-                </ul>
-            </div>
-        </div>
+            <!-- Credit Bootstrap -->
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#main-nav" aria-controls="main-nav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            {% include 'includes/mobile-nav.html' %}
+            {% include 'includes/navbar-2.html' %}
+        </nav>
+    <!-- Navbar 2-->
     </header>
 
     {% if messages %}
