@@ -37,16 +37,14 @@
   <body>
     <header class="container-fluid fixed-top">
     <!-- Navbar 1 -->
-        <div class="row pt-lg-2 d-none d-lg-flex" id="navbar-1">
+        <div class="row d-none d-lg-flex navbar-1">
             <div class="col-3 py-1 py-lg-0 search-bar">
                 <form method="GET" action="">
                     <div class="input-group">
                         <input class="form-control search-input rounded-0" type="text" name="q" placeholder="What are you looking for?">
                         <div class="input-group-append">
                             <button class="form-control search-icon" type="submit">
-                                <span class="icon">
-                                    <i class="fas fa-search"></i>
-                                </span>
+                                <i class="fas fa-search"></i>
                             </button>
                         </div>
                     </div>
@@ -94,9 +92,14 @@
             </div>
         </div>
     <!-- Navbar 1 -->
+    <!-- Navbar 1 Mobile -->
+    <div class="row navbar-1 d-lg-none justify-content-end">
+        {% include 'includes/mobile-nav.html' %}
+    </div>
+    <!-- Navbar 1 Mobile -->
     <!-- Navbar 2-->
         <nav id="navbar-2" class="row navbar navbar-expand-lg pt-lg-2 d-lg-flex">
-            <div class="col-12 col-lg-4 my-auto text-center" id="logo-col">
+            <div class="col-4 my-auto text-center" id="logo-col">
                 <a href="{% url 'home' %}" class="nav-link logo-link">
                     <h2 class="my-0" id="logo"><strong>goldish.</strong></h2>
                 </a>
@@ -105,7 +108,6 @@
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#main-nav" aria-controls="main-nav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
-            {% include 'includes/mobile-nav.html' %}
             {% include 'includes/navbar-2.html' %}
         </nav>
     <!-- Navbar 2-->

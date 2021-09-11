@@ -4,6 +4,12 @@ html {
     background-color: #fafaf9;
 }
 
+
+a,
+a:not([href]) {
+    color: black;
+}
+
 /*----------------------------navbar */
 
 #logo,
@@ -51,9 +57,13 @@ html {
     padding: 0.4rem 0.4rem 0rem 0.4rem;
 }
 
-#navbar-1 {
+.navbar-1 {
     height: 50px;
     background-color: #fafaf9;
+}
+
+.search-dropdown {
+    background-color: #fafaf9
 }
 
 /* navbar 2 */
@@ -61,15 +71,12 @@ html {
 #navbar-2 {
     background-color: rgb(241, 239, 235);
     height: 130px;
+    padding: 0;
 }
 
 .logo-link {
     width: fit-content;
     padding-bottom: 10px;
-}
-
-#logo-col {
-    margin-left: 12rem;
 }
 
 #logo {
@@ -84,6 +91,14 @@ html {
 
 div#nav2-links a.nav-link {
     margin-right: 1.5rem;
+}
+
+.navbar-toggler-icon {
+    color: black;
+}
+
+.navbar-collapse {
+    background-color: rgb(241, 239, 235);
 }
 
 /* h1 & Button on home page */
@@ -192,8 +207,15 @@ div.home-h1 .h1, h1 {
           left: 0;
           z-index: 1030;
       }
-  
+
       .header-container {
-        padding-top: 150px;
+        padding-top: 100px;
     }
   }
+
+  @media (min-width: 1162px) {
+
+    #logo-col {
+        margin-left: 12rem;
+    }
+  } 
