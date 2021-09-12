@@ -10,11 +10,11 @@
             </div>
         </a>
         <div class="dropdown-menu border-0 w-100 p-3 rounded-0 my-0 search-dropdown" aria-labelledby="mobile-search">
-            <div class="row justify-content-end" id="navbar-1">
-                <div class="col-3 py-1 py-lg-0 search-bar">
+            <div class="row justify-content-center" id="navbar-1">
+                <div class="col-3 py-1 py-lg-0 search-bar-mobile">
                     <form method="GET" action="">
-                        <div class="input-group">
-                            <input class="form-control search-input rounded-0" type="text" name="q"
+                        <div class="input-group justify-content-center">
+                            <input class="form-control search-input rounded-0" id="inputId" type="text" name="q"
                                 placeholder="What are you looking for?">
                             <div class="input-group-append">
                                 <button class="form-control search-icon" type="submit">
@@ -37,7 +37,7 @@
                 </p>
             </div>
         </a>
-        <div class="dropdown-menu border-0" aria-labelledby="user-options">
+        <div class="dropdown-menu border-0 profile-dropdown-menu" aria-labelledby="user-options">
             {% if request.user.is_authenticated %}
             {% if request.user.is_superuser %}
                 <a href="{% url 'account_logout' %}" class="dropdown-item">Product Management</a>

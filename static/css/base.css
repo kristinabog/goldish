@@ -17,7 +17,7 @@ a:not([href]) {
     color: #ad7006;
 }
 
-/* navbar1 */
+/* navbar 1 */
 
 .fas,
 .far {
@@ -26,6 +26,18 @@ a:not([href]) {
 
 .search-bar {
     margin-top: 5px;
+}
+
+.search-bar-mobile {
+    min-width: 60vw;
+}
+
+#inputId {
+    min-width: 45vw;
+}
+
+.navbar-light .navbar-nav .nav-link {
+    color: rgb(9 6 6);
 }
 
 .search-input {
@@ -38,7 +50,6 @@ a:not([href]) {
     font-family: 'Cardo';
     padding: 2px 0 0 0;
     font-size: 14px;
-
 }
 
 .search-icon {
@@ -48,9 +59,10 @@ a:not([href]) {
 }
 
 .nav-text {
-    font-size: 10px;
+    font-size: 11px;
     font-weight: 600;
     color: #9b6507;
+    font-family: 'Lora';
 }
 
 .nav-link { 
@@ -59,11 +71,18 @@ a:not([href]) {
 
 .navbar-1 {
     height: 50px;
-    background-color: #fafaf9;
 }
 
+.navbar-1,
 .search-dropdown {
     background-color: #fafaf9
+}
+
+.profile-dropdown-menu {
+    min-width: 5rem;
+    transform: translate3d(-50px, 45px, 0px);
+    font-family: 'Lora', sans-serif;
+    font-size: 0.88rem;
 }
 
 /* navbar 2 */
@@ -93,12 +112,18 @@ div#nav2-links a.nav-link {
     margin-right: 1.5rem;
 }
 
-.navbar-toggler-icon {
-    color: black;
-}
-
 .navbar-collapse {
     background-color: rgb(241, 239, 235);
+}
+
+.navbar-light .navbar-toggler {
+    margin-right: 5px;
+}
+
+.navbar-nav .dropdown-menu {
+    text-align: center;
+    background-color: rgb(241, 239, 235);
+    font-size: 0.87rem;
 }
 
 /* h1 & Button on home page */
@@ -198,8 +223,8 @@ div.home-h1 .h1, h1 {
     }
   }
   
-  /* fixed top navbar only on medium and up */
-  @media (min-width: 992px) {
+/* fixed top navbar only on medium and up */
+@media (min-width: 992px) {
       .fixed-top-desktop-only {
           position: fixed;
           top: 0;
@@ -213,9 +238,28 @@ div.home-h1 .h1, h1 {
     }
   }
 
-  @media (min-width: 1162px) {
-
+@media (min-width: 1162px) {
     #logo-col {
         margin-left: 12rem;
     }
   } 
+
+@media (max-width: 340px) {
+    #inputId {
+        min-width: 60vw;
+    }
+
+    #logo {
+        font-size: 2.5rem;
+    }
+  } 
+
+@media (max-width: 400px) {
+    div.home-h1 .h1, h1 {
+    font-size: 1.3rem;
+    }
+
+    .navbar-nav .dropdown-menu {
+        font-size: 0.75rem;
+    }
+}

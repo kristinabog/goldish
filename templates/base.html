@@ -61,7 +61,7 @@
                                 </p>
                             </div>
                         </a>
-                        <div class="dropdown-menu border-0" aria-labelledby="user-options">
+                        <div class="dropdown-menu border-0 profile-dropdown-menu" aria-labelledby="user-options">
                             {% if request.user.is_authenticated %}
                                 {% if request.user.is_superuser %}
                                     <a href="" class="dropdown-item">Product Management</a>
@@ -98,7 +98,7 @@
     </div>
     <!-- Navbar 1 Mobile -->
     <!-- Navbar 2-->
-        <nav id="navbar-2" class="row navbar navbar-expand-lg pt-lg-2 d-lg-flex">
+        <nav id="navbar-2" class="row navbar navbar-expand-lg pt-lg-2 d-lg-flex navbar-light text-dark">
             <div class="col-4 my-auto text-center" id="logo-col">
                 <a href="{% url 'home' %}" class="nav-link logo-link">
                     <h2 class="my-0" id="logo"><strong>goldish.</strong></h2>
