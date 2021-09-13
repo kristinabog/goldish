@@ -167,6 +167,10 @@ div.home-h1 .h1, h1 {
     font-weight: 600;
 }
 
+.home-div {
+    padding-top: 7rem;
+}
+
 /* Code credit https://blog.hubspot.com/website/css-fade-in */
 .fade-in-text {
     display: inline-block;
@@ -235,6 +239,10 @@ div.home-h1 .h1, h1 {
 
       .header-container {
         padding-top: 100px;
+    }
+
+    .home-div {
+        padding-top: 10rem;
     }
   }
 
