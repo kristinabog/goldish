@@ -10,6 +10,16 @@ a:not([href]) {
     color: black;
 }
 
+.h2-heading {
+    font-family: 'Lora', sans-sereif;
+    text-transform: uppercase;
+}
+
+.lead {
+    font-size: 0.7rem;
+    font-family: 'Lora', sans-serif;
+}
+
 /*----------------------------navbar */
 
 #logo,
@@ -238,7 +248,7 @@ div.home-h1 .h1, h1 {
       }
 
       .header-container {
-        padding-top: 100px;
+        padding-top: 175px;
     }
 
     .home-div {
