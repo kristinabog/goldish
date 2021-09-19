@@ -232,6 +232,10 @@ div.home-h1 .h1, h1 {
     font-size: 1.5rem;
 }
 
+.card {
+    background-color: #fafaf9;
+}
+
 /* -------------------------------- Media Queries */
 
 /* Slightly larger container on xl screens */
