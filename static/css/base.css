@@ -236,6 +236,17 @@ div.home-h1 .h1, h1 {
     background-color: #fafaf9;
 }
 
+/* Sort selector */
+
+select {
+    word-wrap: normal;
+    border: transparent;
+    border-bottom: 1px black solid;
+    background-color: #fafaf9;
+}
+
+
+
 /* -------------------------------- Media Queries */
 
 /* Slightly larger container on xl screens */
