@@ -1,24 +1,21 @@
 html {
     height: 100%;
+}
+
+body {
     font-family: 'Cardo', sans-serif;
     background-color: #fafaf9;
 }
-
 
 a,
 a:not([href]) {
     color: black;
 }
 
-.h2-heading {
-    font-family: 'Lora', sans-sereif;
-    text-transform: uppercase;
-}
-
-.lead {
-    font-size: 0.8rem;
+.lora {
     font-family: 'Lora', sans-serif;
 }
+
 
 /*----------------------------navbar */
 
@@ -145,7 +142,6 @@ div.home-h1 .h1, h1 {
 .discover-button {
     background: black;
     min-width: 260px;
-    font-family:'Cardo';
     margin-top: 1rem;
     color: rgb(219 203 190);
     letter-spacing: 1px;
@@ -167,7 +163,6 @@ div.home-h1 .h1, h1 {
 
 .home-h1 {
     font-size: 2rem;
-    font-family: 'Cardo', sans-serif;
     color: black;
     text-align: center;
 }
@@ -227,6 +222,15 @@ div.home-h1 .h1, h1 {
     height: 100vh;
 }
 
+/*----------------------- Product templates */
+
+.product-name {
+    font-size: 0.8rem;
+}
+
+.product-details-name {
+    font-size: 1.5rem;
+}
 
 /* -------------------------------- Media Queries */
 
