@@ -16,7 +16,7 @@ a:not([href]) {
 }
 
 .lead {
-    font-size: 0.7rem;
+    font-size: 0.8rem;
     font-family: 'Lora', sans-serif;
 }
 
@@ -254,7 +254,17 @@ div.home-h1 .h1, h1 {
     .home-div {
         padding-top: 10rem;
     }
-  }
+}
+
+@media (max-width: 991px) {
+    .header-container {
+        padding-top: 190px;
+    }
+
+    /* body {
+        height: calc(100vh - 190px);
+    } */
+}
 
 @media (min-width: 1162px) {
     #logo-col {
