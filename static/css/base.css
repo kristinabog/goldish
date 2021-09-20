@@ -133,6 +133,10 @@ div#nav2-links a.nav-link {
     font-size: 0.87rem;
 }
 
+.nav-item {
+    padding-right: 10px;
+}
+
 /* h1 & Button on home page */
 
 div.home-h1 .h1, h1 {
