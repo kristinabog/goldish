@@ -95,21 +95,35 @@ and style of the website.
 
 ### Images
 
-home-img - background home
+home-img - background home:
+
 Put together with [Canva](https://www.canva.com/)
+
 [Left Picture](https://www.pexels.com/photo/side-view-of-a-pretty-woman-wearing-gold-earring-5029244/)
+
 [Right Picture](https://www.pexels.com/photo/side-view-of-a-pretty-woman-wearing-stylish-necklace-and-earring-5029179/)
 
-Product Images
+Product Images:
 
-From [Unsplash](https://unsplash.com/):
+From [Unsplash](https://unsplash.com/)
 - [Necklace-1](https://unsplash.com/photos/ImEzF9B91Mk)
 - [Ring-1](https://unsplash.com/photos/Pxexdj3Q09g)
 
 From [Pexels](https://www.pexels.com/)
 - [Earrings-1](https://www.pexels.com/nl-nl/foto/hout-strand-zand-structuur-4996905/)
 
-
+From Google image Search (Commercial filter):
+- [Ring-2](https://stock.adobe.com/hu/search/images?k=gold+ruby+ring)
+- [Ring-3](https://us.123rf.com/450wm/ukmarkjohnson/ukmarkjohnson2007/ukmarkjohnson200700007/150530621-chocolate-diamond-yellow-gold-ring.jpg?ver=6)
+- [Necklace-2](http://www.maisonvanbelle.com/wp-content/uploads/2016/04/hrg12.jpg)
+- [Necklace-3](https://us.123rf.com/450wm/phatthanit/phatthanit1608/phatthanit160800066/61490111-gold-chain-necklace-isolated-on-white-background-.jpg?ver=6)
+- [Bracelet-1](https://burst.shopifycdn.com/photos/simple-gold-bracelet.jpg?width=925&exif=1&iptc=1)
+- [Bracelet-2](https://t4.ftcdn.net/jpg/01/82/64/71/360_F_182647124_6nrP52iC8opc8F3WsEGte3gZtKk1DDSA.jpg)
+- [Bracelet-3](https://us.123rf.com/450wm/jandix/jandix2010/jandix201000009/157609618-jewelry-bracelet-gold-finish-stainless-steel-white-color-background.jpg?ver=6)
+- [Earrings-2](
+https://static.vecteezy.com/system/resources/previews/002/605/906/non_2x/diamond-earring-gold-free-photo.jpg)
+- [Earrings-3](
+https://us.123rf.com/450wm/radub85/radub851606/radub85160600104/58075774-gold-earrings-with-pearl-on-white.jpg?ver=6)
 
 ### Acknowledgements
 
