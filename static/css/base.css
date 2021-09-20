@@ -59,6 +59,14 @@ a:not([href]) {
     font-size: 14px;
 }
 
+.search-input:focus {
+    box-shadow : none;
+    border: none;
+    border-bottom: 1px black solid;
+    outline: none;
+    background: transparent;
+}
+
 .search-icon {
     border: 0 transparent;
     background: transparent;
@@ -249,6 +257,10 @@ select {
     background-color: #fafaf9;
 }
 
+select:focus {
+    outline: none;
+    border-bottom: 1px black solid;
+ }
 
 
 /* -------------------------------- Media Queries */
