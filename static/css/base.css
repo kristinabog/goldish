@@ -241,11 +241,25 @@ div.home-h1 .h1, h1 {
 }
 
 .product-details-name {
-    font-size: 1.5rem;
+    font-size: 2rem;
+    letter-spacing: 1px;
 }
 
 .card {
     background-color: #fafaf9;
+}
+
+.qty-text {
+    font-size: 12px;
+    letter-spacing: 1px;
+}
+
+.qty-select {
+    max-width: 350px;
+}
+
+.add-btn {
+    width: 350px;
 }
 
 /* Sort selector */
