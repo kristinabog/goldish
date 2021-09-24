@@ -124,6 +124,7 @@ From Google image Search (Commercial filter):
 https://static.vecteezy.com/system/resources/previews/002/605/906/non_2x/diamond-earring-gold-free-photo.jpg)
 - [Earrings-3](
 https://us.123rf.com/450wm/radub85/radub851606/radub85160600104/58075774-gold-earrings-with-pearl-on-white.jpg?ver=6)
+- [No Image](https://us.123rf.com/450wm/surfupvector/surfupvector1908/surfupvector190802662/129243509-denied-art-line-icon-censorship-no-photo-no-image-available-reject-or-cancel-concept-vector-illustra.jpg?ver=6)
 
 ### Acknowledgements
 
