@@ -331,12 +331,22 @@ select:focus {
     }
   } 
 
-@media (max-width: 400px) {
+@media (max-width: 500px) {
     div.home-h1 .h1, h1 {
     font-size: 1.3rem;
     }
 
     .navbar-nav .dropdown-menu {
         font-size: 0.75rem;
+    }
+
+    .home-container {
+        background:
+        linear-gradient(rgb(61 59 59 / 40%), rgb(199 185 185 / 40%)),
+        url('/media/mobile-home-img.jpg'),
+        no-repeat center center fixed;
+        background-size: cover;
+
+        height: 100vh;
     }
 }
