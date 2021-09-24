@@ -240,7 +240,7 @@ div.home-h1 .h1, h1 {
 /*----------------------- Product templates */
 
 .product-name {
-    font-size: 0.8rem;
+    font-size: 0.9rem;
 }
 
 .product-details-name {
@@ -303,6 +303,12 @@ select:focus {
     outline: none;
     border-bottom: 1px black solid;
  }
+
+/* -------------------------- Footer */
+
+footer {
+    background-color: rgb(241, 239, 235);
+}
 
 
 /* -------------------------------- Media Queries */
