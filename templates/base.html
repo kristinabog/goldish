@@ -2,7 +2,8 @@
 
 <!doctype html>
 <html lang="en">
-  <head>
+
+<head>
     {% block meta %}
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <meta charset="utf-8">
@@ -13,8 +14,10 @@
     {% endblock %}
 
     {% block corecss %}
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-    <link href="https://fonts.googleapis.com/css2?family=Cardo:wght@400;700&family=Lora:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css2?family=Cardo:wght@400;700&family=Lora:wght@700&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="{% static  'css/base.css' %}">
     {% endblock %}
 
@@ -23,25 +26,33 @@
 
     {% block corejs %}
     <script src="https://kit.fontawesome.com/c923bd6760.js" crossorigin="anonymous"></script>
-    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+        integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous">
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous">
+    </script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous">
+    </script>
     {% endblock %}
 
     {% block extra_js %}
     {% endblock %}
 
-    <link rel="icon" href="../media/favicon.ico"/>
+    <link rel="icon" href="../media/favicon.ico" />
     <title>goldish. {% block extra_title %}{% endblock %}</title>
-  </head>
-  <body>
+</head>
+
+<body>
     <header class="container-fluid fixed-top">
-    <!-- Navbar 1 -->
+        <!-- Navbar 1 -->
         <div class="row d-none d-lg-flex navbar-1">
             <div class="col-3 py-1 py-lg-0 search-bar">
                 <form method="GET" action="{% url 'products' %}">
                     <div class="input-group">
-                        <input class="form-control search-input rounded-0" type="text" name="q" placeholder="What are you looking for?">
+                        <input class="form-control search-input rounded-0" type="text" name="q"
+                            placeholder="What are you looking for?">
                         <div class="input-group-append">
                             <button class="form-control search-icon" type="submit">
                                 <i class="fas fa-search"></i>
@@ -53,7 +64,8 @@
             <div class="col-9 my-auto py-1 py-lg-0">
                 <ul class="list-inline list-unstyled text-center text-lg-right my-auto">
                     <li class="list-inline-item dropdown">
-                        <a class="text-black nav-link" href="#" id="user-options" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <a class="text-black nav-link" href="#" id="user-options" data-toggle="dropdown"
+                            aria-haspopup="true" aria-expanded="false">
                             <div class="text-center">
                                 <div><i class="fas fa-user fa-lg"></i></div>
                                 <p class="nav-text">
@@ -63,26 +75,27 @@
                         </a>
                         <div class="dropdown-menu border-0 profile-dropdown-menu" aria-labelledby="user-options">
                             {% if request.user.is_authenticated %}
-                                {% if request.user.is_superuser %}
-                                    <a href="" class="dropdown-item">Product Management</a>
-                                {% endif %}
-                                <a href="" class="dropdown-item">My Profile</a>
-                                <a href="{% url 'account_logout' %}" class="dropdown-item">Logout</a>
+                            {% if request.user.is_superuser %}
+                            <a href="" class="dropdown-item">Product Management</a>
+                            {% endif %}
+                            <a href="" class="dropdown-item">My Profile</a>
+                            <a href="{% url 'account_logout' %}" class="dropdown-item">Logout</a>
                             {% else %}
-                                <a href="{% url 'account_signup' %}" class="dropdown-item">Register</a>
-                                <a href="{% url 'account_login' %}" class="dropdown-item">Login</a>
+                            <a href="{% url 'account_signup' %}" class="dropdown-item">Register</a>
+                            <a href="{% url 'account_login' %}" class="dropdown-item">Login</a>
                             {% endif %}
                         </div>
                     </li>
                     <li class="list-inline-item">
-                        <a class="{% if grand_total %}text-info font-weight-bold{% else %}text-black{% endif %} nav-link" href="{% url 'view_bag' %}">
+                        <a class="{% if grand_total %}text-info font-weight-bold{% else %}text-black{% endif %} nav-link"
+                            href="{% url 'view_bag' %}">
                             <div class="text-center">
                                 <div><i class="fas fa-shopping-bag fa-lg"></i></div>
                                 <p class="price-cart my-0 nav-text">
                                     {% if grand_total %}
-                                        ${{ grand_total|floatformat:2 }}
+                                    ${{ grand_total|floatformat:2 }}
                                     {% else %}
-                                        €0.00
+                                    €0.00
                                     {% endif %}
                                 </p>
                             </div>
@@ -91,13 +104,13 @@
                 </ul>
             </div>
         </div>
-    <!-- Navbar 1 -->
-    <!-- Navbar 1 Mobile -->
-    <div class="row navbar-1 d-lg-none justify-content-end">
-        {% include 'includes/mobile-nav.html' %}
-    </div>
-    <!-- Navbar 1 Mobile -->
-    <!-- Navbar 2-->
+        <!-- Navbar 1 -->
+        <!-- Navbar 1 Mobile -->
+        <div class="row navbar-1 d-lg-none justify-content-end">
+            {% include 'includes/mobile-nav.html' %}
+        </div>
+        <!-- Navbar 1 Mobile -->
+        <!-- Navbar 2-->
         <!-- Credit Navbar Bootstrap -->
         <nav id="navbar-2" class="row navbar navbar-expand-lg pt-lg-2 d-lg-flex navbar-light text-dark">
             <div class="col-4 my-auto text-center" id="logo-col">
@@ -105,16 +118,17 @@
                     <h2 class="my-0" id="logo"><strong>goldish.</strong></h2>
                 </a>
             </div>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#main-nav" aria-controls="main-nav" aria-expanded="false" aria-label="Toggle navigation">
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#main-nav"
+                aria-controls="main-nav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
             {% include 'includes/navbar-2.html' %}
         </nav>
-    <!-- Navbar 2-->
+        <!-- Navbar 2-->
     </header>
 
     {% if messages %}
-        <div class="message-container"></div>
+    <div class="message-container"></div>
     {% endif %}
 
     {% block page_header %}
@@ -126,108 +140,108 @@
     {% block postloadjs %}
     {% endblock %}
 
-  </body>
-  <!-- Footer Credit Bootstrap -->
-    <footer class="text-center text-lg-start">
+</body>
+<!-- Footer -->
+<footer class="text-center text-lg-start">
     <!-- Social media -->
-    <section
-      class="d-flex justify-content-center justify-content-lg-between p-4 border-bottom">
-      <div class="me-5 d-none d-lg-block">
-        <span>Get connected with us on social networks:</span>
-      </div>
-  
-      <div>
-        <a href="" class="ml-4 mr-4 text-reset">
-          <i class="fab fa-facebook-f"></i>
-        </a>
-        <a href="" class="ml-4 mr-4  text-reset">
-          <i class="fab fa-twitter"></i>
-        </a>
-        <a href="" class="ml-4 mr-4  text-reset">
-          <i class="fab fa-instagram"></i>
-        </a>
-        <a href="https://www.linkedin.com/in/kristinabog/" class="ml-4 mr-4  text-reset">
-          <i class="fab fa-linkedin"></i>
-        </a>
-        <a href="" class="ml-4 mr-4  text-reset">
-          <i class="fab fa-github"></i>
-        </a>
-      </div>
-      <!-- Right -->
+    <section class="d-flex justify-content-center justify-content-lg-between p-4 border-bottom">
+        <div class="me-5 d-none d-lg-block">
+            <span>Get connected with us on social networks:</span>
+        </div>
+
+        <div>
+            <a href="" class="ml-4 mr-4 text-reset">
+                <i class="fab fa-facebook-f"></i>
+            </a>
+            <a href="" class="ml-4 mr-4 text-reset">
+                <i class="fab fa-twitter"></i>
+            </a>
+            <a href="" class="ml-4 mr-4 text-reset">
+                <i class="fab fa-instagram"></i>
+            </a>
+            <a href="" class="ml-4 mr-4 text-reset">
+                <i class="fab fa-linkedin"></i>
+            </a>
+            <a href="" class="ml-4 mr-4 text-reset">
+                <i class="fab fa-github"></i>
+            </a>
+        </div>
     </section>
     <!-- Social media -->
-  
+
     <!-- Links  -->
     <section class="">
-      <div class="container text-center text-md-start mt-5">
-        <div class="row mt-3"></div>
-          <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
-            <h6 class="fw-bold mb-4">
-              <i class="fas fa-gem me-3"></i> goldish.
-            </h6>
-            <p>
-              Handmade with love. Quality gold plated jewelry for everyday use.
-            </p>
-          </div>
+        <div class="container text-center text-md-start mt-5">
+            <div class="row mt-3">
+                <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
+                    <h6 class="text-uppercase fw-bold mb-4">
+                        <i class="fas fa-gem me-3"></i>
+                        <strong>goldish</strong>
+                    </h6>
+                    <p>
+                        Handmade with love. Quality gold plated jewelry for everyday use.
+                    </p>
+                </div>
 
-          <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
-            <h6 class="text-uppercase fw-bold mb-4">
-              Products
-            </h6>
-            <p>
-              <a href="#!" class="text-reset">Necklaces</a>
-            </p>
-            <p>
-              <a href="#!" class="text-reset">Bracelets</a>
-            </p>
-            <p>
-              <a href="#!" class="text-reset">Earrings</a>
-            </p>
-            <p>
-              <a href="#!" class="text-reset">Rings</a>
-            </p>
-          </div>
+                <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
+                    <h6 class="text-uppercase fw-bold mb-4">
+                        Products
+                    </h6>
+                    <p>
+                        <a href="#!" class="text-reset">Necklaces</a>
+                    </p>
+                    <p>
+                        <a href="#!" class="text-reset">Bracelets</a>
+                    </p>
+                    <p>
+                        <a href="#!" class="text-reset">Earrings</a>
+                    </p>
+                    <p>
+                        <a href="#!" class="text-reset">Rings</a>
+                    </p>
+                </div>
 
-          <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
-            <h6 class="text-uppercase fw-bold mb-4">
-              Useful links
-            </h6>
-            <p>
-              <a href="#!" class="text-reset">Pricing</a>
-            </p>
-            <p>
-              <a href="#!" class="text-reset">Settings</a>
-            </p>
-            <p>
-              <a href="#!" class="text-reset">Orders</a>
-            </p>
-            <p>
-              <a href="#!" class="text-reset">Help</a>
-            </p>
-          </div>
+                <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
+                    <h6 class="text-uppercase fw-bold mb-4">
+                        Useful links
+                    </h6>
+                    <p>
+                        <a href="#!" class="text-reset">Pricing</a>
+                    </p>
+                    <p>
+                        <a href="#!" class="text-reset">Settings</a>
+                    </p>
+                    <p>
+                        <a href="#!" class="text-reset">Orders</a>
+                    </p>
+                    <p>
+                        <a href="#!" class="text-reset">Help</a>
+                    </p>
+                </div>
 
-          <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
-            <h6 class="text-uppercase fw-bold mb-4">
-              Contact
-            </h6>
-            <p><i class="fas fa-home me-3"></i> London, E1 6AN, UK</p>
-            <p>
-              <i class="fas fa-envelope me-3"></i>
-              info@goldish.com
-            </p>
-            <p><i class="fas fa-phone me-3"></i> + 44 000 000 88</p>
-          </div>
+                <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
+                    <h6 class="text-uppercase fw-bold mb-4">
+                        Contact
+                    </h6>
+                    <p><i class="fas fa-home me-3"></i> London, EN 10012, UK</p>
+                    <p>
+                        <i class="fas fa-envelope me-3"></i>
+                        info@goldish.com
+                    </p>
+                    <p><i class="fas fa-phone me-3"></i> + 44 000 000 88</p>
+                </div>
+            </div>
         </div>
-      </div>
     </section>
     <!-- Links  -->
-  
+
     <!-- Copyright -->
     <div class="text-center p-4" style="background-color: rgba(0, 0, 0, 0.05);">
-      © 2021 Copyright:
-      <a class="text-reset fw-bold" href="https://www.linkedin.com/in/kristinabog/">Kristina Bogdanovic</a>
+        © 2021 Copyright:
+        <a class="text-reset fw-bold" href="https://www.linkedin.com/in/kristinabog/">Kristina Bogdanovic</a>
     </div>
     <!-- Copyright -->
-  </footer>
-  <!-- Footer -->
+</footer>
+<!-- Footer -->
+
 </html>
