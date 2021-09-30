@@ -304,6 +304,15 @@ select:focus {
     border-bottom: 1px black solid;
  }
 
+/* --------------------- Shopping Bag */
+
+.tr-shop-bag {
+    font-size: 14px;
+}
+
+.shop-bag-total {
+    background-color: rgb(241, 239, 235);
+}
 /* -------------------------- Footer */
 
 footer {
