@@ -2,8 +2,8 @@ from django.shortcuts import render, redirect
 
 # Create your views here.
 
+
 def view_bag(request):
-    """ A view that returns the content in the shopping bag """
 
     return render(request, 'bag/bag.html')
 
