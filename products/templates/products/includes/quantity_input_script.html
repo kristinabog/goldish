@@ -2,12 +2,14 @@
     // Credit Code Institute Boutique Ado Project
     
     // Disable +/- buttons outside 1-99 range
-    function handleEnableDisable(itemId) {
-        var currentValue = parseInt($(`#id_qty_${itemId}`).val());
+    function handleEnableDisable(itemId, size) {
+        var currentValue = parseInt($(`.id_qty_${itemId}`).val());
+
         var minusDisabled = currentValue < 2;
         var plusDisabled = currentValue > 98;
-        $(`#decrement-qty_${itemId}`).prop('disabled', minusDisabled);
-        $(`#increment-qty_${itemId}`).prop('disabled', plusDisabled);
+
+        $(`.decrement-qty_${itemId}`).prop('disabled', minusDisabled);
+        $(`.increment-qty_${itemId}`).prop('disabled', plusDisabled);
     }
 
     // Ensure proper enabling/disabling of all inputs on page load
@@ -26,15 +28,12 @@
     // Increase quantity
     $('.increment-qty').click(function(e) {
        e.preventDefault();
+       var itemId = $(this).data('item_id');
        var closestInput = $(this).closest('.input-group').find('.qty_input')[0];
-       var currentValue = parseInt($(closestInput).val());
        var allQuantityInputs = $(`.input-group-${itemId} input[name='quantity']`);
+       var currentValue = parseInt($(closestInput).val());
        $(allQuantityInputs).val(currentValue + 1);
        handleEnableDisable(itemId);
-
-       console.log(closestInput);
-       console.log(currentValue);
-       console.log(this);
     });
 
     // Lower quantity
@@ -46,8 +45,6 @@
        var allQuantityInputs = $(`.input-group-${itemId} input[name='quantity']`);
        $(allQuantityInputs).val(currentValue - 1);
        handleEnableDisable(itemId);
-
-       console.log(currentValue);
     });
 
     
