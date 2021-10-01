@@ -266,6 +266,16 @@ div.home-h1 .h1, h1 {
     border-radius: 0;
 }
 
+.qty-bag-sm {
+    width: 110px;
+}
+
+.form-control:focus {
+    box-shadow: none;
+    outline: none;
+    border: 1px solid black;
+}
+
 i.fa-minus, 
 .fa-plus {
     color: rgb(219 203 190);
