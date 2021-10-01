@@ -258,7 +258,17 @@ div.home-h1 .h1, h1 {
 }
 
 .qty-select {
-    max-width: 350px;
+    width: 350px;
+}
+
+.qty_input {
+    border: 1.5px solid black;
+    border-radius: 0;
+}
+
+i.fa-minus, 
+.fa-plus {
+    color: rgb(219 203 190);
 }
 
 .add-btn {
@@ -348,29 +358,25 @@ footer {
     }
 }
 
+@media (max-width: 1050px) {
+    .image-container img{
+        max-width: 300px;
+    }
+}
+
 @media (max-width: 991px) {
     .header-container {
         padding-top: 190px;
     }
 
-    /* body {
+    body {
         height: calc(100vh - 190px);
-    } */
+    }
 }
 
 @media (min-width: 1162px) {
     #logo-col {
         margin-left: 12rem;
-    }
-  } 
-
-@media (max-width: 340px) {
-    #inputId {
-        min-width: 60vw;
-    }
-
-    #logo {
-        font-size: 2.5rem;
     }
   } 
 
@@ -393,3 +399,23 @@ footer {
         height: 100vh;
     }
 }
+
+@media (max-width: 400px) {
+    .add-btn {
+        width: 300px;
+    }
+
+    .qty-select {
+        width: 300px;
+    }
+}
+
+@media (max-width: 340px) {
+    #inputId {
+        min-width: 60vw;
+    }
+
+    #logo {
+        font-size: 2.5rem;
+    }
+  } 
