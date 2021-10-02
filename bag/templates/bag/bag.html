@@ -47,7 +47,7 @@
                                     <td class="py-3">
                                         <p class="my-0">${{ item.product.price }}</p>
                                     </td>
-                                    <td class="py-3">
+                                    <td class="py-3 text-center">
                                         <form class="form update-form" method="POST" action="">
                                             {% csrf_token %}
                                             <div class="form-group qty-bag-sm">
@@ -70,6 +70,7 @@
                                                 </div>
                                             </div>
                                         </form>
+                                        <a class="update-link text-info text-uppercase"><small>Update</small></a>
                                     </td>
                                     <td class="py-3">
                                         <p class="my-0">${{ item.product.price }}</p>
