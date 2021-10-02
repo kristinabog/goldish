@@ -333,6 +333,10 @@ select:focus {
 .shop-bag-total {
     background-color: rgb(241, 239, 235);
 }
+
+.remove-item {
+    cursor: pointer;
+}
 /* -------------------------- Footer */
 
 footer {
