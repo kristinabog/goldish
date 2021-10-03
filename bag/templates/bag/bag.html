@@ -76,7 +76,7 @@
                                         <p class="my-0">${{ item.product.price }}</p>
                                     </td>
                                     <td class="py-3">
-                                        <a class="remove-item" id="remove_{{ item.item_id }}" data-size="{{ item.size }}"><i class="far fa-trash-alt"></i></a>
+                                        <a class="remove-item" id="remove_{{ item.item_id }}" data-size="{{ item.size }}"><i class="fas fa-times text-black"></i></a>
                                     </td>
                                 </tr>
                             {% endfor %}
@@ -96,26 +96,45 @@
                 <div class="table-responsive rounded">
                     <table class="table table-sm table-borderless">
                         <tr>
-                            <td colspan="5" class="pt-5 text-right">
-                                <h6><strong>Bag Total: €{{ total|floatformat:2 }}</strong></h6>
-                                <h6>Delivery: €{{ delivery|floatformat:2 }}</h6>
-                                <h4 class="mt-4"><strong>Grand Total: €{{ grand_total|floatformat:2 }}</strong></h4>
-                                {% if free_delivery_delta > 0 %}
-                                    <p class="mb-1 text-danger">
-                                        Spend <strong>€{{ free_delivery_delta }}</strong> more and get free delivery!
-                                    </p>
-                                {% endif %}
+                            <td class="pt-5 text-left">
+                                <h6><strong>Bag Total:</strong>
+                            </td>
+                            <td class="pt-5 text-right">
+                                <h6 ><strong>€ {{ total|floatformat:2 }}</strong></h6>
                             </td>
                         </tr>
                         <tr>
-                            <td colspan="5" class="text-center pt-4">
+                            <td class="text-left">
+                                <h6>Delivery:</h6>
+                            </td>
+                            <td class="text-right">
+                                <h6>€ {{ delivery|floatformat:2 }}</h6>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="text-left pt-4">
+                                <h4><strong>Grand Total:</strong></h4>
+                            </td>
+                            <td class="text-right pt-4">
+                                 <h4><strong>€{{ grand_total|floatformat:2 }}</strong></h4>  
+                            </td>
+                        </tr>
+                        <tr>
+                            {% if free_delivery_delta > 0 %}
+                            <p class="mb-1 text-danger">
+                                Spend <strong>€{{ free_delivery_delta }}</strong> more and get free delivery!
+                            </p>
+                            {% endif %}
+                        </tr>
+                        <tr>
+                            <td colspan="5" class="text-center pt-3">
                                 <a href="" class="discover-button btn btn-ls rounded-0 text-uppercase py-3">
                                     <span class="text-uppercase">Checkout</span>
                                 </a>
                             </td>
                         </tr>
-                        <tr>
-                            <td class="text-center">
+                        <tr class="text-center">
+                            <td>
                                 <a href="{% url 'products' %}" class="btn btn-sm rounded-0 text-uppercase py-3">
                                     <span class="icon">
                                         <i class="fas fa-chevron-left"></i>
