@@ -46,12 +46,12 @@
                                         <p class="my-0 small text-muted">SKU: {{ item.product.sku|upper }}</p>
                                     </td>
                                     <td class="py-3">
-                                        <p class="my-0">${{ item.product.price }}</p>
+                                        <p class="my-0">€{{ item.product.price }}</p>
                                     </td>
-                                    <td class="py-3 text-center">
+                                    <td class="py-3">
                                         <form class="form update-form" method="POST" action="{% url 'adjust_bag' item.item_id %}">
                                             {% csrf_token %}
-                                            <div class="form-group qty-bag-sm">
+                                            <div class="form-group qty-bag-sm my-0">
                                                 <div class="input-group input-group-{{ item.item_id }}">
                                                     <div class="input-group-prepend">
                                                         <button class="decrement-qty btn btn-sm btn-white rounded-0 decrement-qty_{{ item.item_id }}" 
@@ -71,10 +71,10 @@
                                                 </div>
                                             </div>
                                         </form>
-                                        <a class="update-link"><i class="fas fa-redo-alt gold-color"></i></a>
+                                        <a class="update-link text-uppercase pl-4"><small class="gold-color">update</small></i></a>
                                     </td>
                                     <td class="py-3">
-                                        <p class="my-0">${{ item.product.price | calc_subtotal:item.quantity }}</p>
+                                        <p class="my-0">€{{ item.product.price | calc_subtotal:item.quantity }}</p>
                                     </td>
                                     <td class="py-3">
                                         <a class="remove-item" id="remove_{{ item.item_id }}" data-size="{{ item.size }}"><i class="fas fa-times gold-color"></i></a>
