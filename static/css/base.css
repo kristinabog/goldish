@@ -16,6 +16,10 @@ a:not([href]) {
     font-family: 'Lora', sans-serif;
 }
 
+.gold-color {
+    color: #ad7006;
+}
+
 
 /*----------------------------navbar */
 
@@ -26,8 +30,7 @@ a:not([href]) {
 
 /* navbar 1 */
 
-.fas,
-.far {
+.nav-icon {
     color: black;
 }
 
@@ -266,18 +269,14 @@ div.home-h1 .h1, h1 {
     border-radius: 0;
 }
 
-.qty-bag-sm {
-    width: 110px;
-}
-
 .form-control:focus {
     box-shadow: none;
     outline: none;
     border: 1px solid black;
 }
 
-i.fa-minus, 
-.fa-plus {
+.minus-ic, 
+.plus-ic {
     color: rgb(219 203 190);
 }
 
@@ -334,9 +333,25 @@ select:focus {
     background-color: rgb(241, 239, 235);
 }
 
-.remove-item {
+.remove-item,
+.update-link {
     cursor: pointer;
 }
+
+.qty-bag-sm {
+    width: 100px;
+}
+
+.bag-qty-input {
+    border: none;
+    background: transparent;
+    font-weight: bold;
+}
+
+.fa-redo-alt {
+    font-size: 13px;
+}
+
 /* -------------------------- Footer */
 
 footer {
