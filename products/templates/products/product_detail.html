@@ -40,18 +40,18 @@
                         <div class="col-12">
                             <p class="m-1 mt-3 text-uppercase lora qty-text">Quantity</p>
                             <div class="form-group qty-select">
-                                <div class="input-group">
-                                    <input class="form-control qty_input" type="number" name="quantity" value="1"
-                                        min="1" max="99" data-item_id="{{ product.id }}" id="id_qty_{{ product.id }}">
+                                <div class="input-group input-group-{{ item.item_id }}">
+                                    <input class="form-control qty_input id_qty_{{ item.item_id }}" type="number" name="quantity" value="1"
+                                        min="1" max="99" data-item_id="{{ item.item_id }}">
                                     <div class="input-group-prepend">
-                                        <button class="decrement-qty btn btn-black rounded-0"
-                                            data-item_id="{{ product.id }}" id="decrement-qty_{{ product.id }}">
+                                        <button class="decrement-qty btn btn-black rounded-0 decrement-qty_{{ item.item_id }}"
+                                            data-item_id="{{ product.id }}" data-size="{{ item.size }}">
                                             <i class="fas fa-minus minus-ic"></i>
                                         </button>
                                     </div>
                                     <div class="input-group-append">
-                                        <button class="increment-qty btn btn-black rounded-0"
-                                            data-item_id="{{ product.id }}" id="increment-qty_{{ product.id }}">
+                                        <button class="increment-qty btn btn-black rounded-0 increment-qty_{{ item.item_id }}"
+                                        data-item_id="{{ item.item_id }}">
                                             <i class="fas fa-plus plus-ic"></i>
                                         </button>
                                     </div>
