@@ -477,6 +477,17 @@ footer {
     }
   } 
 
+@media (max-width: 760px) {
+    .products-details-div {
+        text-align: center;
+    }
+
+    .qty-select {
+        margin-left: auto!important;
+        margin-right: auto!important;
+    }
+}
+
 @media (max-width: 500px) {
     div.home-h1 .h1, h1 {
     font-size: 1.3rem;
@@ -505,6 +516,10 @@ footer {
     .qty-select {
         width: 300px;
     }
+
+    .message-container {
+        right: 0px;
+    }
 }
 
 @media (max-width: 340px) {
@@ -515,4 +530,22 @@ footer {
     #logo {
         font-size: 2.5rem;
     }
+
+    .image-container img{
+        max-width: 260px;
+    }
+
+    .add-btn {
+        width: 260px;
+    }
+
+    .qty-select {
+        width: 260px;
+    }
+
+    .product-details-container {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+
   } 

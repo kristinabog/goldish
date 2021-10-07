@@ -40,10 +40,12 @@
                             Spend <strong>${{ free_delivery_delta }}</strong> more to get free delivery!
                         </p>
                     {% endif %}
-                    <a href="{% url 'view_bag' %}" class="discover-button btn btn-block rounded-0">
-                        <span class="text-uppercase">Go To Checkout</span>
-                        <i class="fas fa-lock"></i>
-                    </a>
+                    <row class="d-flex justify-content-center">
+                        <a href="{% url 'view_bag' %}" class="discover-button btn btn-block rounded-0">
+                            <span class="text-uppercase">Go To Checkout</span>
+                            <i class="fas fa-lock"></i>
+                        </a>
+                    </row>
                 </div>
             </div>
         {% endif %}
