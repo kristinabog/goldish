@@ -27,7 +27,7 @@ class OrderForm(forms.ModelForm):
             'street_address2': 'Apartment, suite, etc.',
         }
 
-        self.fields['full_name'].widget.attrs['autofocus'] = True
+        self.fields['first_name'].widget.attrs['autofocus'] = True
         for field in self.fields:
             if self.fields[field].required:
                 placeholder = f'{placeholders[field]} *'
