@@ -5,6 +5,7 @@ html {
 body {
     font-family: 'Assistant', sans-serif;
     background-color: #fafaf9;
+    min-height: 100vh;
 }
 
 a,
@@ -464,10 +465,6 @@ footer {
 @media (max-width: 991px) {
     .header-container {
         padding-top: 190px;
-    }
-
-    body {
-        height: calc(100vh - 190px);
     }
 }
 
