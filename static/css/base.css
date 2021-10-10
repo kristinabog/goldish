@@ -125,9 +125,9 @@ a:not([href]) {
     border-bottom-style: solid;
     border-bottom-width: 1px;
     max-width: 12rem;
-    font-family: 'Lora', sans-serif;
+    font-family: 'Assistant', sans-serif;
     padding: 2px 0 0 0;
-    font-size: 14px;
+    font-size: 12px;
 }
 
 .search-input:focus {
@@ -145,10 +145,10 @@ a:not([href]) {
 }
 
 .nav-text {
-    font-size: 11px;
+    font-size: 12px;
     font-weight: 600;
     color: #9b6507;
-    font-family: 'Lora', sans-serif;
+    font-family: 'Assistant', sans-serif;
 }
 
 .nav-link { 
@@ -167,7 +167,7 @@ a:not([href]) {
 .profile-dropdown-menu {
     min-width: 5rem;
     transform: translate3d(-50px, 45px, 0px);
-    font-family: 'Lora', sans-serif;
+    font-family: 'Assistant', sans-serif;
     font-size: 0.88rem;
 }
 
