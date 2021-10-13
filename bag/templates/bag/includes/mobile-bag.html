@@ -1,0 +1,46 @@
+{% load static %}
+{% load bag_tools %}
+
+<div class="table-responsive rounded d-md-none">
+    <table class="table table-sm table-borderless">
+
+        {% for item in bag_items %}
+            <tr>
+                <td class="pt-3 pr-3 pb-3 pl-0 w-25">
+                    <img class="img-fluid rounded" src="{{ item.product.image.url }}">
+                </td>
+                <td class="py-3">
+                    <p class="my-0 product-name-bag"><strong>{{ item.product.name }}</strong></p>
+                        <form class="form update-form" method="POST" action="{% url 'adjust_bag' item.item_id %}">
+                            {% csrf_token %}
+                            <div class="form-group qty-bag-sm my-0 mt-2">
+                                <div class="input-group input-group-{{ item.item_id }}">
+                                    <div class="input-group-prepend">
+                                        <button class="decrement-qty btn btn-sm btn-white rounded-0 decrement-qty_{{ item.item_id }}" 
+                                            data-item_id="{{ item.item_id }}" data-size="{{ item.size }}">
+                                            <i class="fas fa-minus fa-sm gold-color"></i>
+                                        </button>
+                                    </div>
+                                    <input class="form-control form-control-sm bag-qty-input qty_input id_qty_{{ item.item_id }}" type="number"
+                                        name="quantity" value="{{ item.quantity }}" min="1" max="99"
+                                        data-item_id="{{ item.item_id }}">
+                                    <div class="input-group-append">
+                                        <button class="increment-qty btn btn-sm btn-white rounded-0 increment-qty_{{ item.item_id }}"
+                                            data-item_id="{{ item.item_id }}">
+                                            <i class="fas fa-plus fa-sm gold-color"></i>
+                                        </button>
+                                    </div>
+                                    <a class="update-link text-uppercase pl-2 mt-1"><small class="gold-color">update</small></i></a>
+                                </div>
+                            </div>
+                        </form>
+                        
+                </td>
+                <td class="py-3 text-right">
+                    <a class="remove-item text-right" id="remove_{{ item.item_id }}" data-size="{{ item.size }}"><i class="fas fa-times gold-color mb-4"></i></a>
+                    <p class="my-0 mt-4 mt-sm-5">€{{ item.product.price | calc_subtotal:item.quantity }}</p>
+                </td>
+            </tr>
+        {% endfor %}
+    </table>
+</div>

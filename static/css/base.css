@@ -545,9 +545,8 @@ footer {
         padding-right: 10px;
     }
 
-    .container-shop-bag {
-        padding-left: 6px;
-        padding-right: 6px;
+    .product-name-bag {
+        font-size: 13px;
     }
 
   } 
