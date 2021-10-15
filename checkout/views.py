@@ -21,8 +21,8 @@ def checkout(request):
         bag = request.session.get('bag', {})
 
         form_data = {
-            'first_name': request.POST['full_name'],
-            'last_name': request.POST['full_name'],
+            'first_name': request.POST['first_name'],
+            'last_name': request.POST['last_name'],
             'email': request.POST['email'],
             'phone_number': request.POST['phone_number'],
             'country': request.POST['country'],

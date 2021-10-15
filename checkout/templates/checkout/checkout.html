@@ -87,7 +87,17 @@
                     {{ order_form.first_name | as_crispy_field }}
                     {{ order_form.last_name | as_crispy_field }}
                     {{ order_form.email | as_crispy_field }}
-                    <div class="form-check form-check-inline float-left mr-0">
+                </fieldset>
+                <fieldset class="rounded px-3 mb-5">
+                    <legend class="fieldset-label small text-black px-1 lora w-auto">Shipping Address</legend>
+                    {{ order_form.street_address1 | as_crispy_field }}
+                    {{ order_form.street_address2 | as_crispy_field }}
+                    {{ order_form.postcode | as_crispy_field }}
+                    {{ order_form.town_or_city | as_crispy_field }}
+                    {{ order_form.country | as_crispy_field }}
+                    {{ order_form.phone_number | as_crispy_field }}
+                    <p class="text-muted small">* is required field</p>
+                    <div class="form-check form-check-inline float-left mr-0 pr-1">
                         {% if user.is_authenticated %}
                         <label class="form-check-label" for="id-save-info">Save this delivery information to my
                             profile</label>
@@ -100,16 +110,6 @@
                         </label>
                         {% endif %}
                     </div>
-                </fieldset>
-                <fieldset class="rounded px-3 mb-5">
-                    <legend class="fieldset-label small text-black px-1 lora w-auto">Shipping Address</legend>
-                    {{ order_form.street_address1 | as_crispy_field }}
-                    {{ order_form.street_address2 | as_crispy_field }}
-                    {{ order_form.postcode | as_crispy_field }}
-                    {{ order_form.town_or_city | as_crispy_field }}
-                    {{ order_form.country | as_crispy_field }}
-                    {{ order_form.phone_number | as_crispy_field }}
-                    <p class="text-muted small">* is required field</p>
                 </fieldset>
                 <fieldset class="px-3">
                     <legend class="fieldset-label small text-black px-1 lora w-auto">Payment</legend>
