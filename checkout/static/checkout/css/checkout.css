@@ -39,3 +39,25 @@
 .checkout-succes-container {
   min-height: 70vh;
 }
+
+.order-number-row {
+  margin-bottom: 0px;
+}
+
+.order-nr-title {
+  margin-bottom: 0;
+}
+
+@media (max-width: 300px) {
+  .order-number{
+    font-size: 13px;
+  }
+
+  .order-nr-title {
+    margin-bottom: 15px;
+  }
+
+  .back-to-shop-btn .discover-button {
+    max-width: 260px
+  }
+}
