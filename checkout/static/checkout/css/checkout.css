@@ -35,3 +35,7 @@
 .checkout-total-col {
     background-color: rgb(241, 239, 235);
 }
+
+.checkout-succes-container {
+  min-height: 70vh;
+}
