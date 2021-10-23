@@ -67,6 +67,17 @@
   height: 100%;
 }
 
+select.lazyselect,
+select option {
+    color: #000000;
+}
+
+select:invalid,
+select option[value=""] {
+    color: #aab7c4 !important;
+}
+
+
 @media (max-width: 300px) {
   .order-number{
     font-size: 13px;

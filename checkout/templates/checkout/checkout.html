@@ -88,6 +88,7 @@
                     {{ order_form.first_name | as_crispy_field }}
                     {{ order_form.last_name | as_crispy_field }}
                     {{ order_form.email | as_crispy_field }}
+                    {{ order_form.phone_number | as_crispy_field }}
                 </fieldset>
                 <fieldset class="rounded px-3 mb-5">
                     <legend class="fieldset-label small text-black px-1 lora w-auto">Shipping Address</legend>
@@ -96,7 +97,6 @@
                     {{ order_form.postcode | as_crispy_field }}
                     {{ order_form.town_or_city | as_crispy_field }}
                     {{ order_form.country | as_crispy_field }}
-                    {{ order_form.phone_number | as_crispy_field }}
                     <p class="text-muted small">* is required field</p>
                     <div class="form-check form-check-inline float-left mr-0 pr-1">
                         {% if user.is_authenticated %}
