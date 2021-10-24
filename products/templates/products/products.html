@@ -10,7 +10,7 @@
 {% endblock %}
 
 {% block content %}
-    <div class="container-fluid">
+    <div class="container-fluid product-container">
         <div class="row">
             <div class="col text-center mt-5">
                 <h2 class="lora text-uppercase">Products</h2>
@@ -33,8 +33,12 @@
                     </div>
                     <div class="col-12 col-md-6 order-md-first">
                         <p class="text-muted mt-3 text-center text-md-left">
-                            {% if search_term or current_sorting != 'None_None' %}
-                                {{ products|length }} Search Results{% if search_term %} found for <strong>"{{ search_term }}"</strong>{% endif %}
+                            {% if current_categories or current_sorting != 'None_None' %}
+                                <span><i class="fas fa-chevron-left pr-2 pl-2"></i><a class="navigation-text" href="{% url 'products' %}">All Products</a></i></span>
+                            {% endif %}
+                            {% if search_term %}
+                                <span><a class="navigation-text" href="{% url 'products' %}">Products</a><i class="fas fa-chevron-right pr-2 pl-2"></i></span>
+                                {{ products|length }} Search results found for <strong>"{{ search_term }}"</strong>
                             {% endif %}
                         </p>
                     </div>

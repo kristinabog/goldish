@@ -310,6 +310,23 @@ div.home-h1 .h1, h1 {
 }
 
 /*----------------------- Product templates */
+.product-container {
+    min-height: 70vh;
+}
+
+.navigation-text {
+    font-size: 14px;
+    text-transform: uppercase;
+}
+
+a.navigation-text:hover {
+    color: black;
+}
+
+.fa-chevron-right,
+.fa-chevron-left {
+    font-size: 10px;
+}
 
 .product-name {
     font-size: 0.9rem;
