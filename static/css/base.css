@@ -127,9 +127,14 @@ a:not([href]) {
     border-bottom-width: 1px;
     max-width: 12rem;
     font-family: 'Assistant', sans-serif;
-    padding: 2px 0 0 0;
+    padding: 2px 0 0 2px;
     font-size: 12px;
 }
+
+.btn:focus,.btn:active {
+    outline: none !important;
+    box-shadow: none;
+ }
 
 .search-input:focus {
     box-shadow : none;
