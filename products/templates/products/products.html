@@ -34,10 +34,10 @@
                     <div class="col-12 col-md-6 order-md-first">
                         <p class="text-muted mt-3 text-center text-md-left">
                             {% if current_categories or current_sorting != 'None_None' %}
-                                <span><i class="fas fa-chevron-left pr-2 pl-2"></i><a class="navigation-text" href="{% url 'products' %}">All Products</a></i></span>
+                                <span><i class="fas fa-chevron-left pr-2 pl-2 nav-chevron"></i><a class="navigation-text" href="{% url 'products' %}">All Products</a></i></span>
                             {% endif %}
                             {% if search_term %}
-                                <span><a class="navigation-text" href="{% url 'products' %}">Products</a><i class="fas fa-chevron-right pr-2 pl-2"></i></span>
+                                <span><a class="navigation-text" href="{% url 'products' %}">Products</a><i class="fas fa-chevron-right pr-2 pl-2 nav-chevron"></i></span>
                                 {{ products|length }} Search results found for <strong>"{{ search_term }}"</strong>
                             {% endif %}
                         </p>
@@ -58,7 +58,11 @@
                                     </a>
                                     {% endif %}
                                     <div class="middle">
-                                        <a href="" class="discover-button btn add-btn2 rounded-0 text-uppercase py-2">ADD</a>
+                                        <a href="{% url 'product_detail' product.id %}" class="discover-button btn add-btn2 rounded-0 text-uppercase py-2">
+                                            VIEW
+                                            <i class="fas fa-chevron-right" id="view-chevron-icon"></i>
+                                        </a>
+                                        
                                     </div>
                                 </div>
                                 <div class="card-body p-0 pt-1">
