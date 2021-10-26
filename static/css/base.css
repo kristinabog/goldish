@@ -447,6 +447,14 @@ select:focus {
     font-size: 13px;
 }
 
+/*-------------------------- Profile */
+
+.profile-container {
+    min-height: 75vh;
+}
+
+
+
 /* -------------------------- Footer */
 
 footer {

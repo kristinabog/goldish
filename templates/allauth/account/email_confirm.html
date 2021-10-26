@@ -6,8 +6,14 @@
 {% block head_title %}{% trans "Confirm E-mail Address" %}{% endblock %}
 
 
-{% block content %}
-<h1>{% trans "Confirm E-mail Address" %}</h1>
+{% block inner_content %}
+<div class="row">
+    <div class="col text-center">
+        <hr>
+        <h2 class="lora text-uppercase">{% trans "Confirm E-mail Address" %}</h2>
+        <hr>
+    </div>
+</div>
 
 {% if confirmation %}
 
