@@ -1,3 +1,8 @@
+.order-history {
+    max-height: 416px;
+    overflow-y: auto;
+}
+
 #profile-update-form .form-control {
     color: #000;
 }
@@ -17,6 +22,6 @@
     color: #000;
 }
 
-/* #id_default_country option:first-child {
+#id_default_country option:first-child {
     color: #aab7c4;
-} */
+}
