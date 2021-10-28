@@ -5,7 +5,6 @@ html {
 body {
     font-family: 'Assistant', sans-serif;
     background-color: #fafaf9;
-    min-height: 100vh;
 }
 
 a,
@@ -450,7 +449,7 @@ select:focus {
 /*-------------------------- Profile */
 
 .profile-container {
-    min-height: 75vh;
+    min-height: 77vh;
 }
 
 .allauth-form-inner-content p {
