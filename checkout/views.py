@@ -106,6 +106,8 @@ def checkout(request):
         try:
             profile = UserProfile.objects.get(user=request.user)
             order_form = OrderForm(initial={
+                'first_name': profile.user.first_name,
+                'last_name': profile.user.last_name,
                 'email': profile.user.email,
                 'phone_number': profile.default_phone_number,
                 'country': profile.default_country,
@@ -114,6 +116,7 @@ def checkout(request):
                 'street_address1': profile.default_street_address1,
                 'street_address2': profile.default_street_address2,
             })
+            print(profile.default_street_address2)
         except UserProfile.DoesNotExist:
             order_form = OrderForm()
     else:
