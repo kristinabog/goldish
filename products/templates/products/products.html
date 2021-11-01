@@ -58,11 +58,20 @@
                                     </a>
                                     {% endif %}
                                     <div class="middle">
-                                        <a href="{% url 'product_detail' product.id %}" class="discover-button btn add-btn2 rounded-0 text-uppercase py-2">
-                                            VIEW
-                                            <i class="fas fa-chevron-right" id="view-chevron-icon"></i>
-                                        </a>
-                                        
+                                        <div class="row">
+                                            <a href="{% url 'product_detail' product.id %}" class="discover-button btn add-btn2 rounded-0 text-uppercase py-2">
+                                                View
+                                                <i class="fas fa-chevron-right" id="view-chevron-icon"></i>
+                                            </a>
+                                        </div>
+                                        <div class="row justify-content-center">
+                                        {% if request.user.is_superuser %}
+                                            <small>
+                                                <a href="{% url 'edit_product' product.id %}">Edit</a> | 
+                                                <a class="text-danger" href="{% url 'delete_product' product.id %}">Delete</a>
+                                            </small>
+                                        {% endif %}
+                                        </div>
                                     </div>
                                 </div>
                                 <div class="card-body p-0 pt-1">
