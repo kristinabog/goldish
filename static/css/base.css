@@ -345,6 +345,10 @@ a.navigation-text:hover {
     letter-spacing: 1px;
 }
 
+.image-container img {
+    max-width: 341px;
+}
+
 .card {
     background-color: #fafaf9;
 }
@@ -519,8 +523,6 @@ select:focus {
 .allauth-form-inner-content form {
     margin-bottom: 1.5rem;
 }
-
-
 
 /* -------------------------- Footer */
 
