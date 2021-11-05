@@ -85,8 +85,7 @@
                 <fieldset class="rounded px-3 mb-5">
                     <legend class="fieldset-label text-black small px-1 w-auto lora text-left">Contact Information
                     </legend>
-                    {{ order_form.first_name | as_crispy_field }}
-                    {{ order_form.last_name | as_crispy_field }}
+                    {{ order_form.full_name | as_crispy_field }}
                     {{ order_form.email | as_crispy_field }}
                     {{ order_form.phone_number | as_crispy_field }}
                 </fieldset>

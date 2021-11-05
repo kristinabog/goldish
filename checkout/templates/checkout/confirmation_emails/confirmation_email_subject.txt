@@ -1,4 +1,4 @@
-Hello {{ order.first_name }}!
+Hello {{ order.full_name }}!
 
 Thank you for your order at Goldish. Your order information is below:
 
