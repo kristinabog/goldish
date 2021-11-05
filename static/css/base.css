@@ -423,6 +423,10 @@ select:focus {
 
 /* --------------------- Shopping Bag */
 
+.bag-container {
+    min-height: 77vh;
+}
+
 .tr-shop-bag {
     font-size: 14px;
 }
