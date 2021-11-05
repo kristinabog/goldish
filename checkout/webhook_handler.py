@@ -79,8 +79,8 @@ class StripeWH_Handler:
         while attempt <= 5:
             try:
                 order = Order.objects.get(
-                    first_name__iexact=shipping_details.name.split(' ')[0],
-                    last_name__iexact=shipping_details.name.split(' ')[1],
+                    first_name=shipping_details.name.split(' ')[0],
+                    last_name=shipping_details.name.split(' ')[1],
                     email__iexact=billing_details.email,
                     phone_number__iexact=shipping_details.phone,
                     country__iexact=shipping_details.address.country,
@@ -97,6 +97,7 @@ class StripeWH_Handler:
             except Order.DoesNotExist:
                 attempt += 1
                 time.sleep(1)
+        print(f"ORDER EXISTS: {order_exists}")
         if order_exists:
             self._send_confirmation_email(order)
             return HttpResponse(
