@@ -1,0 +1,50 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block page_header %}
+    <div class="container header-container">
+        <div class="row">
+            <div class="col"></div>
+        </div>
+    </div>
+{% endblock %}
+
+{% block content %}
+    <div class="container-fluid product-container">
+        <div class="row">
+            <div class="col text-center mt-5">
+                <h2 class="lora text-uppercase">Wishlist</h2>
+                <hr class="w-50 mb-1">
+            </div>
+        </div>
+        <div class="row">
+            {% for product in products %}
+                <div class="col-sm-6 col-md-6 col-lg-4 col-xl-3">
+                    <div class="card h-100 border-0">
+                        <div class="product-img">
+                            {% if product.image %}
+                            <a href="{% url 'product_detail' product.id %}">
+                                <img class="card-img-top img-fluid" src="{{ product.image.url }}" alt="{{ product.name }}">
+                            </a>
+                            {% else %}
+                            <a href="{% url 'product_detail' product.id %}">
+                                <img class="card-img-top img-fluid" src="{{ MEDIA_URL }}no-image.jpg" alt="{{ product.name }}">
+                            </a>
+                            {% endif %}
+                        </div>
+                        <div class="card-body p-0 pt-1">
+                            <div class="row mb-5">
+                                <div class="col-9 text-left pr-0">
+                                    <p class="product-name mb-0 pr-0"><strong>{{ product.name }}</strong></p>
+                                </div>
+                                <div class="col-3 text-right pl-0">
+                                    <p class="product-name mb-0 pl-0">€ {{ product.price }}</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+{% endblock %}
