@@ -1,7 +1,7 @@
 <h1 align="center">goldish</h1>
 
 This is an E-Commerce website that focuses on selling simple and fine gold jewelry for everyday use.
-For educational purposes only.
+It is designed and developed by Kristina Bogdanovic. For educational purposes only.
 
 ## Table of Content
 
@@ -15,6 +15,26 @@ For educational purposes only.
 ## User Experience (UX)
 
 ### User stories
+
+As an user, I want to be able to:
+1. See all products listed with pictures and their price
+2. See all the product details of an individual product
+3. To select a product to purchase
+4. Get real time feedback of my actions on the website
+5. View my bag and total costs
+6. Securily pay for my order
+7. Receive a confirmation e-mail of my order
+
+As a first time user, I want to be able to:
+1. Easily create an account on the website in order to get access to features for registered users
+
+As a returning user, I want to be able to:
+1. Easily log in to my account
+2. Keep track of all my orders
+3. Save default information, in order to make a new order faster
+4. 
+
+
 
 ### Strategy
 
@@ -54,9 +74,9 @@ Wireframes
 1. [Bootstrap:](https://getbootstrap.com/)
     was used to assist with the responsiveness and styling of the website.
 2. [Google Fonts:](https://fonts.google.com/)
-    was used to import the font-family 'Cardo' and 'Lora' into the style.css file.
+    was used to import the font-families into the style.css file.
 3. [Font Awesome:](https://fontawesome.com/)
-    was used to add social media icons in the footer.
+    was used to add all the icons found on the website.
 4. [Git:](https://git-scm.com/)
     was used for version control. In the terminal of Gitpod, I used Git to add and commit to Git and after pushing it to Github.
 5. [GitHub:](https://github.com/)
@@ -68,7 +88,7 @@ Wireframes
 8. [Heroku:](https://www.heroku.com) 
     was used to deploy the website.
 9. [JQuery:](https://jquery.com/)
-    was used for the interactive elements from Materialize.
+    was used for the interactive elements of Bootstrap.
 
 ## Testing
 
