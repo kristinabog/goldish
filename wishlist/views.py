@@ -11,8 +11,9 @@ def get_wishlist(request):
     """
     wishlist = Wishlist.objects.filter(user=request.user)
 
+    template = 'wishlist/wishlist.html'
     context = {
         'wishlist': wishlist,
     }
 
-    return render(request, 'wishlist/wishlist.html', context)
+    return render(request, template, context)

@@ -315,7 +315,7 @@ div.home-h1 .h1, h1 {
 
 /*----------------------- Product templates */
 .product-container {
-    min-height: 70vh;
+    min-height: 66vh;
 }
 
 .navigation-text {
@@ -379,7 +379,7 @@ a.navigation-text:hover {
 }
 
 .add-btn {
-    width: 350px;
+    width: 172.8px;
 }
 
 .add-btn2 {
