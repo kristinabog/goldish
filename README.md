@@ -18,31 +18,86 @@ It is designed and developed by Kristina Bogdanovic. For educational purposes on
 
 As an user, I want to be able to:
 1. See all products listed with pictures and their price
-2. See all the product details of an individual product
-3. To select a product to purchase
-4. Get real time feedback of my actions on the website
-5. View my bag and total costs
-6. Securily pay for my order
-7. Receive a confirmation e-mail of my order
+2. Filter through the products by category, price or name
+3. to usa a searh query, in order to find a specific product
+4. See all the product details of an individual product
+5. To easily select a product to purchase
+6. Get real time feedback on my actions on the website
+7. View my bag and total costs
+8. To update my bag anytime, in order to delete a product or update the quantity of a product
+9. Proceed to a secure checkout, in order to make a purchase
+10. Receive a confirmation e-mail of my order
+11. To contact the store in case of any questions or issues
 
 As a first time user, I want to be able to:
 1. Easily create an account on the website in order to get access to features for registered users
 
 As a returning user, I want to be able to:
 1. Easily log in to my account
-2. Keep track of all my orders
+2. Keep track of all my previous orders
 3. Save default information, in order to make a new order faster
-4. 
-
+4. Add multiple deliver addresses to my account
+5. Reset my password in case I lost mine
 
 
 ### Strategy
 
-The goal of this website is to sell only gold jewerly.
+The goal of this website is to sell only gold jewerly that are simple and can be worn everyday.
+This attracts mainly women who choose to wear this kind of jewerly. The website is built to mainly sell
+to clients in Europe as the prices are in Euro and there is no option to choose a county.
 
 ### Scope
 
+A scope was defined in order to indentify the features needed for the previously defined market group 
+
+1. Content requirements
+
+- Product information:
+    - Name
+    - Image
+    - Price
+    - Description
+    - Material of the product
+
+
+- General questions
+- Contact Form
+- Create an account and keep up with order history
+- Typography and colors matching the aesthetic of the company logo
+- Having a wishlist, to remember themselves of products they liked
+
+2. Functionality requirements:
+
+- Edit profile and update info
+- Adding extra delivery addresses
+- Secure payment system
+- Adding products from the products details page to bag or wishlist
+- Updating bag and wishlist by removing products or increasing quantities in bag
+- Easily find products by every jewerly category
+
 ### Structure
+
+In order for the user to easily navigate through the website the following navigation was applied:
+
+1. User management
+
+    From the home page, clicking on the profile button on the top right hand side you can choose to log in or register.
+    Once logged in, the user has access to their own profile: with their details, addresses and purchase history and their wishlist.
+    And ofcourse the user is able to select anything on the website to purchase and their bag being untouched for when they return back to the website without continuing to checkout.
+
+2. Product management
+
+    From the home page you can click on 'Discover now' and it will redirect you to all the products listed.
+    Top left handside you can enter any query to find a specific product.
+    In the navbar you can click on one of the jewerly categories or on all products to get the product sorted by price.
+    When clicking on the picture of the prodcut, you can view all the details, price and buttons to add to the bag or wishlist.
+
+3. Transaction management
+
+    In order to make a purchase, you click on your bag in the top right corner which already gives a preview on the price under the icon.
+    In the shopping bag you can edit the quantity or delete products.
+    When clicked on checkout, you fill in the form and payment details. The contact and shipping information you can save to your profile for future use. Once the payment was accepted you end up on the confirmation page with all the order details and a confirmation e-mail in your inbox. 
+
 
 ### Surface
 
@@ -147,5 +202,9 @@ https://us.123rf.com/450wm/radub85/radub851606/radub85160600104/58075774-gold-ea
 - [No Image](https://us.123rf.com/450wm/surfupvector/surfupvector1908/surfupvector190802662/129243509-denied-art-line-icon-censorship-no-photo-no-image-available-reject-or-cancel-concept-vector-illustra.jpg?ver=6)
 
 ### Acknowledgements
+- My Mentor for the helpful feedback.
 
+- A very huge thank you to the Tutor support who helped me solve bugs.
+
+- A thank you to family and friends that took the time to test the website.
 
