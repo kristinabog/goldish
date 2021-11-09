@@ -3,7 +3,7 @@ from django.contrib.auth.models import User
 from products.models import Product
 
 
-class WishList(models.Model):
+class Wishlist(models.Model):
     """
     Model with the list of wishlist items of the user
     """
