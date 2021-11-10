@@ -1,4 +1,6 @@
-from django.shortcuts import render, redirect, reverse, HttpResponse, get_object_or_404
+from django.shortcuts import (
+    render, redirect, reverse, HttpResponse, get_object_or_404
+)
 from django.contrib import messages
 
 from products.models import Product
@@ -7,6 +9,7 @@ from products.models import Product
 
 
 def view_bag(request):
+    """ View to render the shopping bag template """
 
     return render(request, 'bag/bag.html')
 
@@ -21,7 +24,8 @@ def add_to_bag(request, item_id):
 
     if item_id in list(bag.keys()):
         bag[item_id] += quantity
-        messages.success(request, f'Updated quantity of {product.name} to {bag[item_id]}!')
+        messages.success(
+                        request, f'Updated quantity of {product.name}')
     else:
         bag[item_id] = quantity
         messages.success(request, f'Added {product.name} to your bag')
