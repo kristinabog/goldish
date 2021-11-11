@@ -1,4 +1,4 @@
-from django.shortcuts import render, get_object_or_404
+from django.shortcuts import render, redirect, reverse, get_object_or_404
 from django.contrib.auth.decorators import login_required
 
 from django.contrib import messages
@@ -12,10 +12,10 @@ def get_wishlist(request):
     """
     Rendering the user's wishlist
     """
-    wishlist = Wishlist.objects.filter(user=request.user)
+    wishlist_products = Wishlist.objects.filter(user=request.user)
 
     context = {
-        'wishlist': wishlist,
+        'wishlist_products': wishlist_products,
     }
 
     return render(request, 'wishlist/wishlist.html', context)
@@ -28,23 +28,14 @@ def add_to_wishlist(request, product_id):
     """
     product = get_object_or_404(Product, pk=product_id)
 
-    wishlist = Wishlist.objects.get(user=request.user)
+    wishlist_items = Wishlist.objects.filter(product=product, user=request.user)
 
-    if wishlist:
-        if product in wishlist:
+    if len(wishlist_items) == 1:
         messages.error(request, "Item is already in your wishlist")
-        else:
-        wishlist.save(product)
+    else:
+        wishlist_item = Wishlist(product=product, user=request.user)
+        wishlist_item.save()
         messages.success(
             request, f'Added {product.name} to your wishlist')
-    else:
 
-
-
-    template = 'wishlist/wishlist.html'
-    context = {
-        'product': product,
-        'wishlist': wishlist,
-    }
-
-    return render(request, template, context)
+    return redirect(reverse('product_detail', args=[product.id]))
