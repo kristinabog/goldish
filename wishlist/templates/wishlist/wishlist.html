@@ -17,34 +17,52 @@
                 <hr class="w-50 mb-1">
             </div>
         </div>
-        <div class="row">
-            {% for item in wishlist_products %}
-                <div class="col-sm-6 col-md-6 col-lg-4 col-xl-3">
-                    <div class="card h-100 border-0">
-                        <div class="product-img">
-                            {% if item.product.image %}
-                            <a href="{% url 'product_detail' item.product.id %}">
-                                <img class="card-img-top img-fluid" src="{{ item.product.image.url }}" alt="{{ item.product.name }}">
-                            </a>
-                            {% else %}
-                            <a href="{% url 'product_detail' item.product.id %}">
-                                <img class="card-img-top img-fluid" src="{{ MEDIA_URL }}no-image.jpg" alt="{{ item.product.name }}">
-                            </a>
-                            {% endif %}
-                        </div>
-                        <div class="card-body p-0 pt-1">
-                            <div class="row mb-5">
-                                <div class="col-9 text-left pr-0">
-                                    <p class="product-name mb-0 pr-0"><strong>{{ item.product.name }}</strong></p>
+        <div class="col-10 offset-1">
+            <div class="row mt-4">
+                {% if wishlist_products %}
+                    {% for item in wishlist_products %}
+                        <div class="col-sm-6 col-md-6 col-lg-4 col-xl-3">
+                            <div class="card h-100 border-0">
+                                <div class="product-img">
+                                    {% if item.product.image %}
+                                    <a href="{% url 'product_detail' item.product.id %}">
+                                        <img class="card-img-top img-fluid" src="{{ item.product.image.url }}" alt="{{ item.product.name }}">
+                                    </a>
+                                    {% else %}
+                                    <a href="{% url 'product_detail' item.product.id %}">
+                                        <img class="card-img-top img-fluid" src="{{ MEDIA_URL }}no-image.jpg" alt="{{ item.product.name }}">
+                                    </a>
+                                    {% endif %}
+                                    <div class="middle">
+                                        <div class="row">
+                                            <a href="{% url 'product_detail' item.product.id %}" class="discover-button btn add-btn2 rounded-0 text-uppercase py-2">
+                                                View
+                                                <i class="fas fa-chevron-right" id="view-chevron-icon"></i>
+                                            </a>
+                                        </div>
+                                    </div>
                                 </div>
-                                <div class="col-3 text-right pl-0">
-                                    <p class="product-name mb-0 pl-0">€ {{ item.product.price }}</p>
+                                <div class="card-body p-0 pt-1">
+                                    <div class="row mb-5">
+                                        <div class="col-9 text-left pr-0">
+                                            <p class="product-name mb-0 pr-0">
+                                                <a href="{% url 'remove_from_wishlist' item.product.id %}">
+                                                    <i class="far fa-trash-alt pr-1"></i>
+                                                </a>
+                                            <strong>{{ item.product.name }}</strong></p>
+                                        </div>
+                                        <div class="col-3 text-right pl-0">
+                                            <p class="product-name mb-0 pl-0">€ {{ item.product.price }}</p>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
-                    </div>
-                </div>
-            {% endfor %}
+                    {% endfor %}
+                {% else %}
+                    <p>Nothing in your wishlist yet!</p>
+                {% endif %}
+            </div>
         </div>
     </div>
 {% endblock %}
