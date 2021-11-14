@@ -99,7 +99,7 @@ a:not([href]) {
 /* navbar 1 */
 
 .nav-icon {
-    color: black;
+    color: #000;
 }
 
 .search-bar {
@@ -179,7 +179,6 @@ a:not([href]) {
 /* navbar 2 */
 
 #navbar-2 {
-    background-color: rgb(241, 239, 235);
     height: 130px;
     padding: 0;
 }
@@ -203,7 +202,9 @@ div#nav2-links a.nav-link {
     margin-right: 1.5rem;
 }
 
-.navbar-collapse {
+.navbar-collapse,
+#navbar-2,
+.navbar-nav .dropdown-menu {
     background-color: rgb(241, 239, 235);
 }
 
@@ -213,7 +214,6 @@ div#nav2-links a.nav-link {
 
 .navbar-nav .dropdown-menu {
     text-align: center;
-    background-color: rgb(241, 239, 235);
     font-size: 0.87rem;
 }
 
@@ -228,15 +228,15 @@ div.home-h1 .h1, h1 {
 }
 
 .discover-button {
-    background: black;
     width: 260px;
     margin-top: 1rem;
     color: rgb(219 203 190);
     letter-spacing: 1px;
 }
 
+.discover-button,
 .btn-black {
-    background: black;
+    background: #000;
 }
 
 .discover-button:hover,
@@ -254,7 +254,7 @@ div.home-h1 .h1, h1 {
 
 .home-h1 {
     font-size: 2rem;
-    color: black;
+    color: #000;
     text-align: center;
 }
 
@@ -324,7 +324,7 @@ div.home-h1 .h1, h1 {
 }
 
 a.navigation-text:hover {
-    color: black;
+    color: #000;
 }
 
 #view-chevron-icon{
@@ -363,14 +363,14 @@ a.navigation-text:hover {
 }
 
 .qty_input {
-    border: 1.5px solid black;
+    border: 1.5px solid #000;
     border-radius: 0;
 }
 
 .form-control:focus {
     box-shadow: none;
     outline: none;
-    border: 1px solid black;
+    border: 1px solid #000;
 }
 
 .minus-ic, 
@@ -412,13 +412,13 @@ a.navigation-text:hover {
 select {
     word-wrap: normal;
     border: transparent;
-    border-bottom: 1px black solid;
+    border-bottom: 1px #000 solid;
     background-color: #fafaf9;
 }
 
 select:focus {
     outline: none;
-    border-bottom: 1px black solid;
+    border-bottom: 1px #000 solid;
  }
 
 /* --------------------- Shopping Bag */
@@ -527,7 +527,7 @@ select:focus {
 .allauth-form-inner-content form {
     margin-bottom: 1.5rem;
 }
- /* ------------------------- Product Form - credit Code Insitute*/
+ /* ------------------------- Product Form - credit Code Insitute */
 
 .btn-file {
     position: relative;
