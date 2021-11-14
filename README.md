@@ -64,7 +64,7 @@ A scope was defined in order to indentify the features needed for the previously
 - Contact Form
 - Create an account and keep up with order history
 - Typography and colors matching the aesthetic of the company logo
-- Having a wishlist, to remember themselves of products they liked
+- Having a wishlist, to remember products they liked but weren't sure to purchase yet
 
 2. Functionality requirements:
 
@@ -103,9 +103,23 @@ In order for the user to easily navigate through the website the following navig
 
 #### Colour Scheme
 
+The chosen color scheme was chosen to match the gold products and the logo. I have chosen for soft shades of gold.
+![color-scheme](media/readme/color-scheme.png)
+
 #### Typography
 
+- The primary font is: Assistant
+
+    Has a clean look and makes it easy to read
+- Secondary font is: Lora
+    
+    Used for logo and titles, gives a indie and classic touch to the website
+
 #### Imagery
+
+- The home page background is a collage of 2 images made on canva.com. As most jewelry website showcase someone wearing jewerly on the landing page, this was my main reason of doing something similar.
+
+- The product images were all cropped and tinified in order to match with all the other product images. I have always tried to find jewerly with a clean white background.
 
 ### Skeleton
 
@@ -114,6 +128,12 @@ Wireframes
 ## Features
 
 ## Information Architecture
+
+### Databases
+- [SQLite:](https://www.sqlite.org/index.html)
+    Was mainly used during development
+- [Heroku Postgres:](https://www.heroku.com/postgres)
+    After deployment this database was used an add-on service of Heroku
 
 ## Technologies Used
 
@@ -128,22 +148,37 @@ Wireframes
 
 1. [Bootstrap:](https://getbootstrap.com/)
     was used to assist with the responsiveness and styling of the website.
-2. [Google Fonts:](https://fonts.google.com/)
+2. [Django](https://www.djangoproject.com/)
+     was used as the web framework for the application
+3. [Django AllAuth:](https://django-allauth.readthedocs.io/en/latest/index.html)
+    was used for user authentication, registration and account management
+4. [Django Crispy Forms:](https://django-crispy-forms.readthedocs.io/en/latest/)
+    was used to style all the Django forms.
+5. [Pillow:](https://pillow.readthedocs.io/en/stable/)
+    Was used to add image processing capabilities to the Python interpreter
+6. [Django Countries:](https://pypi.org/project/django-countries/)
+    was used to provide forms with country choices
+7. [Google Fonts:](https://fonts.google.com/)
     was used to import the font-families into the style.css file.
-3. [Font Awesome:](https://fontawesome.com/)
+8. [Font Awesome:](https://fontawesome.com/)
     was used to add all the icons found on the website.
-4. [Git:](https://git-scm.com/)
+9. [Git:](https://git-scm.com/)
     was used for version control. In the terminal of Gitpod, I used Git to add and commit to Git and after pushing it to Github.
-5. [GitHub:](https://github.com/)
+10. [GitHub:](https://github.com/)
     is used to store and share my project.
-6. [Balsamiq:](https://balsamiq.com/)
+11. [Balsamiq:](https://balsamiq.com/)
     was used to create the wireframes during the design process.
-7. [TinyPNG:](https://tinypng.com/)
+12. [TinyPNG:](https://tinypng.com/)
     was used to compress the images.
-8. [Heroku:](https://www.heroku.com) 
+13. [Heroku:](https://www.heroku.com) 
     was used to deploy the website.
-9. [JQuery:](https://jquery.com/)
+14. [JQuery:](https://jquery.com/)
     was used for the interactive elements of Bootstrap.
+15. [Jinja:](https://jinja.palletsprojects.com/en/2.10.x/)
+    was used to simplify and display backend data in the html files.
+16. [Stripe:](https://stripe.com/)
+    used as the payment system when making an order.
+
 
 ## Testing
 
@@ -167,6 +202,7 @@ The following validators were used to make sure there were no syntax errors in t
 
 - A lot of code is based on the code of the Boutique Ado tutorial from Code Institute but edited to my liking 
 and style of the website.
+
 
 ### Images
 
