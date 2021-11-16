@@ -3,15 +3,15 @@
     overflow-y: auto;
 }
 
-#profile-update-form .form-control {
+.profile-update-form .form-control {
     color: #000;
 }
 
-#profile-update-form input::placeholder {
+.profile-update-form input::placeholder {
     color: #aab7c4;
 }
 
-#profile-update-form div.form-group .form-control{
+.profile-update-form div.form-group .form-control{
     max-width: 540px;
     border-radius: 0;
     border: 1px solid black;
