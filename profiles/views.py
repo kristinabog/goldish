@@ -1,10 +1,9 @@
 from django.shortcuts import render, get_object_or_404
 from django.contrib import messages
 from django.contrib.auth.decorators import login_required
-from .models import UserProfile
-from .forms import UserProfileForm, DeliveryAddressForm
-
 from checkout.models import Order
+from .models import UserProfile
+from .forms import UserProfileForm
 
 
 @login_required
@@ -35,6 +34,7 @@ def profile(request):
 
 
 def order_history(request, order_number):
+    """ Rendering the user's order history """
     order = get_object_or_404(Order, order_number=order_number)
 
     messages.info(request, (
@@ -46,29 +46,6 @@ def order_history(request, order_number):
     context = {
         'order': order,
         'from_profile': True,
-    }
-
-    return render(request, template, context)
-
-
-@login_required
-def add_new_address(request):
-    """ Display the add new address template """
-
-    if request.method == 'POST':
-        form = DeliveryAddressForm(request.POST)
-        if form.is_valid():
-            form.save()
-            messages.success(request, 'Address added')
-        else:
-            messages.error(request,
-                           'Failed to add. Ensure the form is valid.')
-    else:
-        form = DeliveryAddressForm()
-
-    template = 'profiles/add_new_address.html'
-    context = {
-        'form': form,
     }
 
     return render(request, template, context)
