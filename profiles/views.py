@@ -54,10 +54,9 @@ def order_history(request, order_number):
 @login_required
 def add_new_address(request):
     """ Display the add new address template """
-    profile = get_object_or_404(UserProfile, user=request.user)
 
     if request.method == 'POST':
-        form = DeliveryAddressForm(request.POST, instance=profile)
+        form = DeliveryAddressForm(request.POST)
         if form.is_valid():
             form.save()
             messages.success(request, 'Address added')
@@ -65,7 +64,7 @@ def add_new_address(request):
             messages.error(request,
                            'Failed to add. Ensure the form is valid.')
     else:
-        form = DeliveryAddressForm(instance=profile)
+        form = DeliveryAddressForm()
 
     template = 'profiles/add_new_address.html'
     context = {

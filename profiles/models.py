@@ -34,9 +34,11 @@ def create_or_update_user_profile(sender, instance, created, **kwargs):
     """
     Create or update the user profile
     """
+    # Saving a new delivery address to profile
     if created:
+        DeliveryAddress.objects.create(user=instance)
         UserProfile.objects.create(user=instance)
-    # Existing users: just saving the profile
+    # Existing users save profile and delivery address
     instance.userprofile.save()
 
 
@@ -44,7 +46,7 @@ class DeliveryAddress(models.Model):
     """
     Model to store multiple delivery addresses
     """
-    user = models.ForeignKey(User, on_delete=models.CASCADE)
+    user = models.OneToOneField(UserProfile, on_delete=models.CASCADE)
     delivery_street_address1 = models.CharField(
         max_length=80, null=True, blank=True)
     delivery_street_address2 = models.CharField(

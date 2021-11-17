@@ -51,9 +51,9 @@ class DeliveryAddressForm(forms.ModelForm):
             'delivery_street_address2': 'Street Address 2',
         }
 
-        self.fields['default_postcode'].widget.attrs['autofocus'] = True
+        self.fields['delivery_postcode'].widget.attrs['autofocus'] = True
         for field in self.fields:
-            if field != 'default_country':
+            if field != 'delivery_country':
                 if self.fields[field].required:
                     placeholder = f'{placeholders[field]} *'
                 else:
