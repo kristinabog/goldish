@@ -117,15 +117,67 @@ The chosen color scheme was chosen to match the gold products and the logo. I ha
 
 #### Imagery
 
-- The home page background is a collage of 2 images made on canva.com. As most jewelry website showcase someone wearing jewerly on the landing page, this was my main reason of doing something similar.
+- The home page background is a collage of 2 images made on canva.com. As most jewelry websites showcase a model wearing jewerly on the landing page, this was my main reason of doing something similar.
 
 - The product images were all cropped and tinified in order to match with all the other product images. I have always tried to find jewerly with a clean white background.
 
 ### Skeleton
 
-Wireframes
+Wireframes:
+- [Home]()
+- [All Products]()
+- [Product Detail]()
+- [Log In]()
+- [Register]()
+- [Profile]()
+- [Bag]()
+- [Checkout]()
+- [wishlist]()
 
 ## Features
+
+- **Navigation bar**
+ 
+    The navbar is fully responsive on all devices and implemented on every page. 
+    It is easy to navigate from any page. Users can also see the current total of their shopping bag under shopping bag icon.
+    Search funcionality is also added to the navbar, to easily search for the right product with keywords.
+
+- **Product pages**
+
+    You can view products 4 per row, on smaller screens the amount of product per row decreases. For each product you wil
+    find their product name and price. Also users are able to sort products by price, name and category.
+    Hovering over the product you will find a view button, which makes it clear for users that clicking on the 
+    picture will take them to the individual products page. On the individual products page users can increase
+    and decrease the quantity they want to buy, or add them to their wishlist.
+
+- **Toasts**
+
+    User will get updates everytime they do an action on the website, it will appear right top side of the page.
+
+- **Shopping bag**
+
+    User can increase and decrease the quantity of products or delete products. On the right side of the page
+    or on mobile screen on the bottom of the page they will see their summary.
+
+- **Checkout page**
+
+    Contains a page where the user can fill in all of their details and select if they want to add the info to their
+    profile. Also it contains the payment system of Stripe, where they fill in their card details and get redirected 
+    to the payment authorisation of their bank when they click 'Complete Order'.
+
+- **Footer**
+    The footer contains quick links to the products pages and links to social media
+    Also containing contact information
+
+- **Profile**
+
+    Users can update their profile info and see their order history.
+
+- **Wishlist**
+
+    Users can see all of the prodcuts they have added to their wishlist. 
+    Same as on the product pages they can click on the pictures to be redirected to the individual products page.
+    Also they can delete products from thier wishlist, clicking on the trash icon next to the product name.
 
 ## Information Architecture
 
@@ -178,23 +230,13 @@ Wireframes
     was used to simplify and display backend data in the html files.
 16. [Stripe:](https://stripe.com/)
     used as the payment system when making an order.
+17. [AWS:](https://aws.amazon.com/)
+    Amazon Web Services was used to store all the media and static files for the deployed project.
 
-
-## Testing
-
-### Validators
-
-The following validators were used to make sure there were no syntax errors in the project.
-
-[W3C HTML Validator](https://validator.w3.org/#validate_by_input)
-
-[W3C CSS Validator](https://jigsaw.w3.org/css-validator/#validate_by_input) 
-
-[JSHint](https://jshint.com/)
-
-[PEP8](http://pep8online.com/) 
 
 ## Deployment
+
+
 
 ## Credits
 
