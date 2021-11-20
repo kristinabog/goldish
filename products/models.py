@@ -53,7 +53,7 @@ class Review(models.Model):
                                  blank=True,
                                  on_delete=models.CASCADE)
     date = models.DateTimeField(auto_now_add=True)
-    content = models.TextField()
+    review_text = models.TextField()
 
     def __str__(self):
         return self.date
