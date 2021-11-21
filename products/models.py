@@ -1,5 +1,6 @@
 from django.db import models
 from django.contrib.auth.models import User
+from profiles.models import UserProfile
 
 
 class Category(models.Model):
@@ -46,14 +47,18 @@ class Review(models.Model):
         """
         ordering = ['-date']
 
-    product = models.ForeignKey(Product, null=True,
+    product = models.ForeignKey(Product,
+                                related_name='reviews',
+                                null=True,
                                 blank=True,
                                 on_delete=models.SET_NULL)
-    username = models.ForeignKey(User, null=True,
-                                 blank=True,
-                                 on_delete=models.CASCADE)
+    profile = models.ForeignKey(UserProfile,
+                                related_name='reviews',
+                                null=True,
+                                blank=True,
+                                on_delete=models.CASCADE)
     date = models.DateTimeField(auto_now_add=True)
     review_text = models.TextField()
 
     def __str__(self):
-        return self.date
+        return f'Review {self.product}'

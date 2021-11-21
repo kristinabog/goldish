@@ -100,23 +100,28 @@
         <div class="col-12 col-md-6 col-lg-4 mt-3">
             {% if request.user.is_authenticated %}
                 {% if edit %}
-                    <!-- form for editing review -->
+                    <!-- Edit Review Form -->
                     <form method="POST" action="{% url 'edit_review' review.id %}#reviews">
                         {% csrf_token %}
                         {{ form|crispy }}
-                        <div>
-                            <button class="discover-button add-btn btn rounded-0 text-uppercase py-2 m-0" type="submit">Edit Review</button>
+                        <div class="col">
+                            <div class="row justify-content-center">
+                                <div>
+                                    <button class="discover-button add-btn btn rounded-0 text-uppercase py-2 mr-2 m-0" type="submit">Edit Review</button>
+                                </div>
+                                <a class="discover-button add-btn btn rounded-0 text-uppercase py-2 m-0" href="{% url 'product_detail' product.id %}">Cancel</a>
+                            </div> 
                         </div>
                     </form>
                 {% else %}
-                    <!-- form for adding new review -->
-                    <form method="POST" action="{% url 'add_review' product.id %}#reviews">
-                        {% csrf_token %}
-                        {{ form|crispy }}
-                        <div>
-                            <button class="discover-button add-btn btn rounded-0 text-uppercase py-2 m-0" type="submit">Add Review</button>
-                        </div>
-                    </form>
+                <!-- form for adding new review -->
+                <form method="POST" action="{% url 'add_review' product.id %}#reviews">
+                    {% csrf_token %}
+                    {{ form|crispy }}
+                    <div>
+                        <button class="discover-button add-btn btn rounded-0 text-uppercase py-2 m-0" type="submit">Add Review</button>
+                    </div>
+                </form>
                 {% endif %}
             {% else %}
                 <p> Please 
@@ -128,31 +133,31 @@
         </div>
     </div>
     <!-- Displaying all reviews-->
-    <div class="row justify-content-center text-center">
-        <div class="col-12 col-md-6 col-lg-4 mt-3">
-            {% if reviews %}
+    <div class="row justify-content-center text-center mt-5 mb-5">
+        <div class="col-12 col-md-6 col-lg-4">
+            {% for review in product.reviews.all %}
             <!-- Card credit Bootstrap -->
-            <div class="card text-center">
+            <div class="card text-center mt-3 mb-3">
                 <div class="card-header text-muted">
-                    by {{ review.user }}
+                    by {{ review.profile.user.username }}
                 </div>
                 <div class="card-body">
                     <p class="card-text">
                         {{ review.review_text }}
                     </p>
-                    {% if review.user == request.user or request.user.is_superuser %}
-                            <a class="discover-button add-btn btn rounded-0 text-uppercase py-2 m-0" href="{% url 'edit_review' review.id %}#reviews">
-                                Edit
-                            </a>
+                    {% if review.profile.user == request.user or request.user.is_superuser %}
+                        <a class="discover-button add-btn btn rounded-0 text-uppercase py-2 m-0" href="{% url 'edit_review' review.id %}#reviews">
+                            Edit
+                        </a>
                     {% endif %}
                 </div>
                 <div class="card-footer text-muted">
-                    {{ review.date_added|date:"d-m-Y"}}
+                    {{ review.date|date:"d-m-Y"}}
                 </div>
             </div>
-            {% else %}
+            {% empty %}
                 <p>No reviews for this product yet. Be the first!</p>
-            {% endif %}
+            {% endfor %}
         </div>
     </div>
 </div>
