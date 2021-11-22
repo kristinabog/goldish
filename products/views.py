@@ -121,6 +121,7 @@ def edit_review(request, review_id):
     else:
         form = ReviewForm(instance=review)
 
+    messages.info(request, 'Scroll down to edit your review')
     template = 'products/product_detail.html'
     context = {
         'form': form,
@@ -129,6 +130,22 @@ def edit_review(request, review_id):
         'edit': True,
     }
     return render(request, template, context)
+
+
+@login_required
+def delete_review(request, review_id):
+    """
+    View for only the superuser to delete a review
+    """
+    if not request.user.is_superuser:
+        messages.error(request, 'You do not have admin access')
+        return redirect(reverse('home'))
+
+    review = get_object_or_404(Review, pk=review_id)
+    product = review.product
+    review.delete()
+    messages.success(request, 'Deleted review')
+    return redirect(reverse('product_detail', args=[product.id]))
 
 
 @login_required
