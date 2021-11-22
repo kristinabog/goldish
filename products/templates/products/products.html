@@ -64,14 +64,6 @@
                                                 <i class="fas fa-chevron-right" id="view-chevron-icon"></i>
                                             </a>
                                         </div>
-                                        <div class="row justify-content-center">
-                                        {% if request.user.is_superuser %}
-                                            <small>
-                                                <a href="{% url 'edit_product' product.id %}">Edit</a> | 
-                                                <a class="text-danger" href="{% url 'delete_product' product.id %}">Delete</a>
-                                            </small>
-                                        {% endif %}
-                                        </div>
                                     </div>
                                 </div>
                                 <div class="card-body p-0 pt-1">
