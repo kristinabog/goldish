@@ -395,6 +395,10 @@ textarea.form-control {
     font-size: 13px;
 }
 
+.modal-btn {
+    max-width: 100px;
+}
+
 /* Opacity Credit https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_image_overlay_opacity */
 
 .product-img:hover .img-fluid{
@@ -445,7 +449,8 @@ select:focus {
 }
 
 .remove-item,
-.update-link {
+.update-link,
+.delete-modal {
     cursor: pointer;
 }
 
@@ -691,6 +696,10 @@ footer {
 
     .product-name-bag {
         font-size: 13px;
+    }
+
+    .product-info-wishlist {
+        font-size: 0.65rem;
     }
 
   } 
