@@ -45,14 +45,14 @@
                                 <div class="card-body p-0 pt-1">
                                     <div class="row mb-5">
                                         <div class="col-9 text-left pr-0">
-                                            <p class="product-name mb-0 pr-0">
+                                            <p class="product-name product-info-wishlist mb-0 pr-0">
                                                 <a href="{% url 'remove_from_wishlist' item.product.id %}">
                                                     <i class="far fa-trash-alt pr-1"></i>
                                                 </a>
                                             <strong>{{ item.product.name }}</strong></p>
                                         </div>
                                         <div class="col-3 text-right pl-0">
-                                            <p class="product-name mb-0 pl-0">€ {{ item.product.price }}</p>
+                                            <p class="product-name product-info-wishlist mb-0 pl-0">€ {{ item.product.price }}</p>
                                         </div>
                                     </div>
                                 </div>
