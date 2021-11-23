@@ -327,7 +327,7 @@ a.navigation-text:hover {
     color: #000;
 }
 
-#view-chevron-icon{
+.view-chevron-icon{
     font-size: 12px;
     color: rgb(219 203 190);
 }
