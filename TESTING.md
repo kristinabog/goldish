@@ -29,3 +29,9 @@ To test the python code, I used the built in python extension to check for PEP8 
 
 All pages score in between 71% - 99%, no major issues found.
 
+### User stories 
+
+### Technical Testing
+
+### Bugs
+
