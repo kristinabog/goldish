@@ -40,6 +40,11 @@ As a returning user, I want to be able to:
 6. Add products to my wishlist, in order to keep track of products I like
 7. View my wishlist and revisit or delete certain products in the list
 
+As a superuser, I want to be able to:
+1. Add new products
+3. Edit and delete existing products, in order to manage the store at all times
+4. Be the only one who can delete reviews, in order to prevent false information in the reviews
+
 
 ### Strategy
 
