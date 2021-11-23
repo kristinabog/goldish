@@ -17,27 +17,28 @@ It is designed and developed by Kristina Bogdanovic. For educational purposes on
 ### User stories
 
 As an user, I want to be able to:
-1. See all products listed with pictures and their price
-2. Filter through the products by category, price or name
-3. to usa a searh query, in order to find a specific product
-4. See all the product details of an individual product
+1. See all products listed with pictures and their price, so I can decide what to choose
+2. Filter through the products by category, price or name, so I can easily find the right product for me
+3. To use a searh query, in order to find a specific product
+4. See all the product details and reviews of an individual product, in order to understand if the porduct is worth purchasing
 5. To easily select a product to purchase
 6. Get real time feedback on my actions on the website
 7. View my bag and total costs
 8. To update my bag anytime, in order to delete a product or update the quantity of a product
-9. Proceed to a secure checkout, in order to make a purchase
+9. Proceed to a secure checkout, in order to make a safe purchase 
 10. Receive a confirmation e-mail of my order
-11. To contact the store in case of any questions or issues
 
 As a first time user, I want to be able to:
 1. Easily create an account on the website in order to get access to features for registered users
 
 As a returning user, I want to be able to:
 1. Easily log in to my account
-2. Keep track of all my previous orders
-3. Save default information, in order to make a new order faster
-4. Add multiple deliver addresses to my account
-5. Reset my password in case I lost mine
+2. Keep track of all my previous orders, in order to check past orders and retrieve the order number
+3. Save default delivery information, in order to make a new order faster
+4. Reset my password in case I lost mine
+5. Leave a review about a specific product and be able to edit, in case of an error in my text
+6. Add products to my wishlist, in order to keep track of products I like
+7. View my wishlist and revisit or delete certain products in the list
 
 
 ### Strategy
@@ -59,12 +60,10 @@ A scope was defined in order to indentify the features needed for the previously
     - Description
     - Material of the product
 
-
-- General questions
-- Contact Form
 - Create an account and keep up with order history
 - Typography and colors matching the aesthetic of the company logo
 - Having a wishlist, to remember products they liked but weren't sure to purchase yet
+- Ability to leave reviews, so the user knows what to expect when purchasing a product
 
 2. Functionality requirements:
 
@@ -124,15 +123,14 @@ The chosen color scheme was chosen to match the gold products and the logo. I ha
 ### Skeleton
 
 Wireframes:
-- [Home]()
-- [All Products]()
-- [Product Detail]()
-- [Log In]()
-- [Register]()
-- [Profile]()
-- [Bag]()
-- [Checkout]()
-- [wishlist]()
+- [Home](media/readme/wf-home.pdf)
+- [All Products](media/readme/wf-products.pdf)
+- [Product Detail](media/readme/wf-product-detail.pdf)
+- [Log In](media/readme/wf-login.pdf)
+- [Register](media/readme/wf-register.pdf)
+- [Bag](media/readme/wf-bag.pdf)
+- [Checkout](media/readme/wf-checkout.pdf)
+- [wishlist](media/readme/wf-wishlist.pdf)
 
 ## Features
 
