@@ -61,7 +61,7 @@
                                         <div class="row">
                                             <a href="{% url 'product_detail' product.id %}" class="discover-button btn add-btn2 rounded-0 text-uppercase py-2">
                                                 View
-                                                <i class="fas fa-chevron-right" id="view-chevron-icon"></i>
+                                                <i class="fas fa-chevron-right view-chevron-icon"></i>
                                             </a>
                                         </div>
                                     </div>
@@ -87,7 +87,7 @@
 
 {% block postloadjs %}
     {{ block.super }}
-    <script type="text/javascript">
+    <script>
         $('#sort-selector').change(function() {
             var selector = $(this);
             var currentUrl = new URL(window.location);
