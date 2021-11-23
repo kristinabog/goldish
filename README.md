@@ -239,6 +239,198 @@ Wireframes:
 
 ## Deployment
 
+The [Code Institute Template](https://github.com/Code-Institute-Org/gitpod-full-template) was used to develop this project
+
+### Requirements
+
+- [Python](https://www.python.org/)
+
+- [PIP](https://pypi.org/project/pip/)
+
+- [Git](https://git-scm.com/) for project version control
+
+- [AWS](https://aws.amazon.com/) account with a set up S3 Bucket
+
+- [Stripe](https://dashboard.stripe.com/) Account for payment functionality
+
+### Making a local clone
+
+1. Log in to [GitHub](https://github.com/) and navigate yourself to the repository.
+2. Click the 'Code' dropdown above the file list.
+3. Copy the URL for the repository.
+4. Open Git Bash
+5. Change the current working directory to where you want the cloned directory.
+6. Type git clone in the CLI and then paste the URL you copied earlier.
+   It should look like this:
+```
+$ git clone https://github.com/kristinabog/goldish
+```
+7. Press enter to create clone
+
+### Local Deployment
+
+1. Install all project requirements with the following command:
+```
+pip3 install requirements.txt
+```
+2. Create a `.gitignore` file and an `env.py` or add your variables to gitpod in settings -> variables
+
+3. Do not forget to add `env.py` to your `.gitignore` file, to avoid pushing keys to github
+
+4. Within the `env.py` file or in your gitpod variables, apply the following environment variables:
+```
+import os
+
+os.environ.setdefault("SECRET_KEY", <your_secret_key>)
+os.environ.setdefault("DEVELOPMENT", '1')
+os.environ.setdefault("STRIPE_PUBLIC_KEY", <your_key>)
+os.environ.setdefault("STRIPE_SECRET_KEY", <your_key>)
+os.environ.setdefault("STRIPE_WH_SECRET", <your_key>)
+```
+5. Apply all database migrations:
+```
+python3 manage.py makemigrations
+```
+```
+python3 manage.py migrate
+```
+6. The JSON files contain all the data for the database, you can import them with the following command:
+```
+python3 manage.py loaddata
+```
+7. You will need to create a superuser:
+```
+python3 manage.py createsuperuser
+```
+8. Run the project with the following command:
+```
+python3 manage.py runserver
+```
+
+### Heroku Deployment
+
+#### Create Heroku App
+
+- In Heroku, create an app with an unique name
+- Choose region, click 'Create App'
+- Select GitHub as Deployment method. Make sure your GitHub username is displayed
+- Type in repo name and click 'search' and then 'connect'
+
+#### Create PostgreSQL Database
+
+1. Navigate to 'Resources'
+2. In the search bar, enter 'postgres' and select 'Heroku Postgres'
+3. Select a plan and click on 'Submit Order Form'
+
+Configure Database:
+
+Install the following dependancies to use Postgres:
+```
+pip3 install psycopg2_binary
+```
+```
+pip3 install dj_database_url
+```
+```
+pip3 install gunicorn
+```
+
+#### Configure Heroku Variables
+
+1. To set all the necessary variables for the project, navigate to 'Settings' and find the 'Reveal Config Vars' button
+Add the following:
+```
+AWS_ACCESS_KEY_ID =	<Your variable here>
+AWS_SECRET_ACCESS_KEY =	<Your variable here>
+DATABASE_URL =	<Your Database URL>
+DISABLE_COLLECTSTATIC =	1 
+EMAIL_HOST_PASS = <Your Email Password>
+EMAIL_HOST_USER = <Your Email Address>
+SECRET_KEY = <Your variable here>
+STRIPE_PUBLIC_KEY = <Your variable here>
+STRIPE_SECRET_KEY = <Your variable here>
+STRIPE_WH_SECRET = <Your Stripe WH Key>
+USE_AWS = True
+```
+2. Navigate to the 'Deploy tab' and scroll down to 'Automatic Deploys' and select 'Enable Automatic Deploys'
+
+#### Further deployment steps
+
+1. Log in to Heroku CLI:
+```
+heroku login -i
+```
+2. Freeze dependancies:
+```
+$ pip3 freeze > requirements.txt
+```
+3. Create a Procfile:
+```
+$ echo web: python app.py > Procfile
+```
+4. In the `settings.py` file:
+    - At the top in the import section add: `import dj_database_url`
+    - Replace `DATABASE` variable with the following:
+    ```
+            if "DATABASE_URL" in os.environ:
+            DATABASES = {"default": dj_database_url.parse(os.environ ["DATABASE_URL"])}
+        else:
+            DATABASES = {
+            "default": {
+                "ENGINE": "django.db.backends.sqlite3",
+                "NAME": BASE_DIR / "db.sqlite3",
+            }
+        }
+    ```
+    - Add Heroku to the ALLOWED HOSTS variable:
+    ```
+    ALLOWED_HOSTS = ['127.0.0.1',
+                 '<your heroku app name>.herokuapp.com',
+                 'localhost']
+    ```
+5. Backup the current SQLite database:
+```
+./manage.py dumpdata --exclude auth.permission --exclude contenttypes > db.json
+```
+6. Migrate the models to the new Postgres database
+```
+python manage.py makemigrations
+```
+```
+python manage.py migrate
+```
+7. Create a new superuser to have access to the Django Admin Page:
+```
+python3 manage.py createsuperuser
+```
+8. Reload the data into the new database:
+```
+./manage.py loaddata db.json
+```
+9. Temporarily disable collectstatic, until the AWS Bucket is set up. This to prevent Heroku from collecting them:
+```
+heroku config:set DISABLE_COLLECTSTATIC=1 --app <your app name>
+```
+10. Push the changes to github:
+```
+$ git add .
+$ git commit -m "Commit Message"
+$ git push
+```
+11. Set up push to heroku:
+```
+heroku git:remote -a <your heroku app name>
+```
+12. Push to heroku:
+```
+git push heroku main
+```
+
+In the top-right of the page, click on 'View App', and then you can view your deployed app.
+
+#### AWS S3 Bucket setup
+
+
 
 
 ## Credits
