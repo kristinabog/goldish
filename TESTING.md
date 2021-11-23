@@ -31,6 +31,8 @@ All pages score in between 71% - 99%, no major issues found.
 
 ### User stories 
 
+[View User Stories Document](media/readme/user-stories-goldish.pdf)
+
 ### Technical Testing
 
 ### Bugs
