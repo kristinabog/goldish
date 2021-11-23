@@ -28,7 +28,3 @@ urlpatterns = [
     path('profile/', include('profiles.urls')),
     path('wishlist/', include('wishlist.urls')),
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
-
-
-handler404 = 'goldish.views.error_404'
-handler500 = 'goldish.views.error_500'
