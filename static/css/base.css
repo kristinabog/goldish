@@ -382,12 +382,16 @@ a.navigation-text:hover {
     width: 173px;
 }
 
+.add-btn1 {
+    width: 173px;
+}
+
 .add-btn2 {
     width: 100px;
 }
 
 textarea.form-control {
-    max-height: 100px
+    max-height: 101px
 }
 
 .review-btn {
