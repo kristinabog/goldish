@@ -432,7 +432,86 @@ git push heroku main
 
 In the top-right of the page, click on 'View App', and then you can view your deployed app.
 
+
 #### AWS S3 Bucket setup
+
+1. Create an account on [AWS](https://aws.amazon.com/)
+2. In the search bar input 'S3' and create a new Bucket
+    - Give your bucket a name and choose closest region
+    - Uncheck Public Access
+3. On Bucket Dashboard click on 'Properties' tab
+    - Turn on 'Static website hosting'
+    - In index and error, enter index.html and error.html and save
+4. In the 'Permissions' tab:
+Configure the following in CORS:
+```
+[
+     {
+          "AllowedHeaders": [
+               "Authorization"
+          ],
+          "AllowedMethods": [
+               "GET"
+          ],
+          "AllowedOrigins": [
+               "*"
+          ],
+          "ExposeHeaders": []
+     }
+]
+```
+5. In Bucket Policy, click Generate Policy
+- Click Policy > S3 Bucket Policy
+- Add * to the Principal Field (selects all principals)
+- Set 'Action' to 'Get Object'
+- Paste in ARN from previous page
+- Click 'Add Statement' and then 'Generate Policy'
+- Copy and paste new policy into Bucket Policy
+- Add */ to the end of the Resources Key and save
+Find Access Control List and set the List Objects Permission to everyone
+
+6. In the Services dropdown list find IAM Dashboard
+- Create a new user group
+- Create a policy from the Policy tab
+- Select Import Managed Policy and S3 Full Access Policy
+- In the Resource section, paste the following:
+```
+[
+     arn:aws:s3:::<your-bucket-name>",
+     "arn:aws:s3:::<your-bucket-name>/*"
+]
+```
+- Click 'Create Policy'
+7. Find the group that you just made
+- Under Permissions click Add permissions, choose Attach Policies and select the one just created
+
+8. Find the 'Users tab' and choose a username
+- Select Programmatic access as the Access type
+- Click Next and add the user to the Group just created
+- Click Next and Create User
+
+9. Download the .csv containing the access key and secret access key.
+- note: it can only be downloaded once, do not share it with anyone
+
+#### Configure AWS Bucket 
+
+1. In the project CLI, install the following:
+```
+pip3 install boto3
+```
+```
+pip3 install django-storages
+```
+2. Freeze new dependancies:
+```
+$ pip3 freeze > requirements.txt
+```
+3. Add the values from the .csv you downloaded to your Heroku Config Vars under Settings
+3. Delete DISABLE_COLLECTSTATIC variable from your Heroku Config Variables
+4. Push your changes
+
+
+
 
 
 
