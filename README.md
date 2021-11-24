@@ -184,6 +184,10 @@ Wireframes:
 
 ## Information Architecture
 
+![Database diagram](media/readme/database-diagram.png)
+
+Made with [DrawSQL](https://drawsql.app/)
+
 ### Databases
 - [SQLite:](https://www.sqlite.org/index.html)
     Was mainly used during development
