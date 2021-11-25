@@ -306,7 +306,7 @@ div.home-h1 .h1, h1 {
 .home-container {
     background: 
     linear-gradient(rgb(61 59 59 / 40%), rgb(199 185 185 / 40%)),
-    url('{{ MEDIA_URL }}home-img.png'),
+    url('/media/home-img.png'),
     no-repeat center center fixed;
     background-size: cover;
 
