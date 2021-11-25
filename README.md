@@ -511,11 +511,6 @@ $ pip3 freeze > requirements.txt
 4. Push your changes
 
 
-
-
-
-
-
 ## Credits
 
 ### Code
