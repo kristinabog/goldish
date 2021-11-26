@@ -3,6 +3,11 @@
 This is an E-Commerce website that focuses on selling simple and fine gold jewelry for everyday use.
 It is designed and developed by Kristina Bogdanovic. For educational purposes only.
 
+[View Live Website](https://kb-goldish.herokuapp.com/)
+
+![Responsive](media/readme/goldish-responsive.png)
+
+
 ## Table of Content
 
 - [User Experience](#user-experience-(ux))
@@ -218,7 +223,7 @@ Made with [DrawSQL](https://drawsql.app/)
     used as the payment system when making an order.
 17. [AWS:](https://aws.amazon.com/)
     Amazon Web Services was used to store all the media and static files for the deployed project.
-    
+
 
 ## Testing -> [TESTING.md](https://github.com/kristinabog/goldish/blob/main/TESTING.md)
 
