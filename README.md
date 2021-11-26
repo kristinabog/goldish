@@ -8,7 +8,7 @@ It is designed and developed by Kristina Bogdanovic. For educational purposes on
 - [User Experience](#user-experience-(ux))
 - [Features](#features)
 - [Technologies used](#technologies-used)
-- [Testing](#testing)
+- [Testing](https://github.com/kristinabog/goldish/blob/main/TESTING.md)
 - [Deployment](#deployment)
 - [Credits](#credits)
 
@@ -54,30 +54,8 @@ to clients in Europe as the prices are in Euro and there is no option to choose 
 
 ### Scope
 
-A scope was defined in order to indentify the features needed for the previously defined market group 
-
-1. Content requirements
-
-- Product information:
-    - Name
-    - Image
-    - Price
-    - Description
-    - Material of the product
-
-- Create an account and keep up with order history
-- Typography and colors matching the aesthetic of the company logo
-- Having a wishlist, to remember products they liked but weren't sure to purchase yet
-- Ability to leave reviews, so the user knows what to expect when purchasing a product
-
-2. Functionality requirements:
-
-- Edit profile and update info
-- Adding extra delivery addresses
-- Secure payment system
-- Adding products from the products details page to bag or wishlist
-- Updating bag and wishlist by removing products or increasing quantities in bag
-- Easily find products by every jewerly category
+The scope for this website is mainly women, who can afford more expensive jewelry. 
+But also anyone who is looking to buy a nice gift for a woman in their lives.
 
 ### Structure
 
@@ -152,6 +130,7 @@ Wireframes:
     Hovering over the product you will find a view button, which makes it clear for users that clicking on the 
     picture will take them to the individual products page. On the individual products page users can increase
     and decrease the quantity they want to buy, or add them to their wishlist.
+    Also users can leave reviews on the products.
 
 - **Toasts**
 
@@ -239,6 +218,9 @@ Made with [DrawSQL](https://drawsql.app/)
     used as the payment system when making an order.
 17. [AWS:](https://aws.amazon.com/)
     Amazon Web Services was used to store all the media and static files for the deployed project.
+    
+
+## Testing -> [TESTING.md](https://github.com/kristinabog/goldish/blob/main/TESTING.md)
 
 
 ## Deployment
