@@ -1,4 +1,4 @@
-<h1 align="center">goldish</h1>
+<h1 align="center">goldish.</h1>
 
 This is an E-Commerce website that focuses on selling simple and fine gold jewelry for everyday use.
 It is designed and developed by Kristina Bogdanovic. For educational purposes only.
@@ -7,6 +7,7 @@ It is designed and developed by Kristina Bogdanovic. For educational purposes on
 
 ![Responsive](media/readme/goldish-responsive.png)
 
+Making test purchase you can do so with the following card number 4242 42424 4242 4242, any expiry date and postcode
 
 ## Table of Content
 
@@ -176,7 +177,7 @@ Made with [DrawSQL](https://drawsql.app/)
 - [SQLite:](https://www.sqlite.org/index.html)
     Was mainly used during development
 - [Heroku Postgres:](https://www.heroku.com/postgres)
-    After deployment this database was used an add-on service of Heroku
+    After deployment this database was used as an add-on service of Heroku
 
 ## Technologies Used
 

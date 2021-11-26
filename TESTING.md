@@ -97,7 +97,7 @@ All pages have been tested on being responsive and passed
 | Checking the box for saving details to profile | delivery details are saved in profile |  Pass |
 | Filling in card details | redirects to confirmation or overlay appears for bank verification  |  Pass |
 | When form not submitting | Webhook created and Stripe shows 200 |  Pass |
-| Successfully making an order | Redirected to confirmation page and receiving a confirmation e-mail |  Pass |
+| Successfully making an order | Redirected to confirmation page and receiving a confirmation e-mail, Stripe shows 200 |  Pass |
 
 
 ### Wishlist
@@ -124,8 +124,8 @@ All pages have been tested on being responsive and passed
 
 
 ### Admin
-| Action     | Expected Behaviour          | Pass/Fail  |
-| ------------- |:-------------:| -----:|
+| Action     | Pass/Fail  |
+| ------------- | -----:|
 | Deleting and editing products |Pass |
 | Deleting and editing reviews |Pass |
 | Having a 'Product management' link in profile dropdown |Pass |
