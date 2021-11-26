@@ -114,6 +114,14 @@ All pages have been tested on being responsive and passed
 | Changing delivery details and clicking save | Updates profile |  Pass |
 | Clicking on past order number | Redirects to order's confirmation page |  Pass |
 
+### Log In/ Register
+| Action     | Expected Behaviour          | Pass/Fail  |
+| ------------- |:-------------:| -----:|
+| Fill in form on log in page | Logs you in with a toasts message |  Pass |
+| Fill in register form | Makes account and shows a success message, confirmation email sent |  Pass |
+| Click on confirmation link in e-mail | Redirects to page where you can click a button to confirm e-mail |  Pass |
+| Logging out by clicking on log out in nav dropdown | Redirects you to a page where you can confirm you want to log out |  Pass |
+
 
 ### Admin
 | Action     | Expected Behaviour          | Pass/Fail  |

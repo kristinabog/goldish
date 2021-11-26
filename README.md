@@ -25,7 +25,7 @@ As an user, I want to be able to:
 1. See all products listed with pictures and their price, so I can decide what to choose
 2. Filter through the products by category, price or name, so I can easily find the right product for me
 3. To use a searh query, in order to find a specific product
-4. See all the product details and reviews of an individual product, in order to understand if the porduct is worth purchasing
+4. See all the product details and reviews of an individual product, in order to understand if the product is worth purchasing
 5. To easily select a product to purchase
 6. Get real time feedback on my actions on the website
 7. View my bag and total costs
@@ -77,7 +77,7 @@ In order for the user to easily navigate through the website the following navig
     From the home page you can click on 'Discover now' and it will redirect you to all the products listed.
     Top left handside you can enter any query to find a specific product.
     In the navbar you can click on one of the jewerly categories or on all products to get the product sorted by price.
-    When clicking on the picture of the prodcut, you can view all the details, price and buttons to add to the bag or wishlist.
+    When clicking on the picture of the product, you can view all the details, price and buttons to add to the bag or wishlist.
 
 3. Transaction management
 
@@ -190,7 +190,8 @@ Made with [DrawSQL](https://drawsql.app/)
 ### Frameworks, Libraries & Programs Used:
 
 1. [Bootstrap:](https://getbootstrap.com/)
-    was used to assist with the responsiveness and styling of the website.
+    was used to assist with the responsiveness and styling of the website, and many other features like 
+    the navbar, cards and modal
 2. [Django](https://www.djangoproject.com/)
      was used as the web framework for the application
 3. [Django AllAuth:](https://django-allauth.readthedocs.io/en/latest/index.html)
@@ -448,37 +449,37 @@ Configure the following in CORS:
 ]
 ```
 5. In Bucket Policy, click Generate Policy
-- Click Policy > S3 Bucket Policy
-- Add * to the Principal Field (selects all principals)
-- Set 'Action' to 'Get Object'
-- Paste in ARN from previous page
-- Click 'Add Statement' and then 'Generate Policy'
-- Copy and paste new policy into Bucket Policy
-- Add */ to the end of the Resources Key and save
-Find Access Control List and set the List Objects Permission to everyone
+    - Click Policy > S3 Bucket Policy
+    - Add * to the Principal Field (selects all principals)
+    - Set 'Action' to 'Get Object'
+    - Paste in ARN from previous page
+    - Click 'Add Statement' and then 'Generate Policy'
+    - Copy and paste new policy into Bucket Policy
+    - Add */ to the end of the Resources Key and save
+    Find Access Control List and set the List Objects Permission to everyone
 
 6. In the Services dropdown list find IAM Dashboard
-- Create a new user group
-- Create a policy from the Policy tab
-- Select Import Managed Policy and S3 Full Access Policy
-- In the Resource section, paste the following:
-```
-[
-     arn:aws:s3:::<your-bucket-name>",
-     "arn:aws:s3:::<your-bucket-name>/*"
-]
-```
+    - Create a new user group
+    - Create a policy from the Policy tab
+    - Select Import Managed Policy and S3 Full Access Policy
+    - In the Resource section, paste the following:
+    ```
+    [
+        arn:aws:s3:::<your-bucket-name>",
+        "arn:aws:s3:::<your-bucket-name>/*"
+    ]
+    ```
 - Click 'Create Policy'
 7. Find the group that you just made
-- Under Permissions click Add permissions, choose Attach Policies and select the one just created
+    - Under Permissions click Add permissions, choose Attach Policies and select the one just created
 
 8. Find the 'Users tab' and choose a username
-- Select Programmatic access as the Access type
-- Click Next and add the user to the Group just created
-- Click Next and Create User
+    - Select Programmatic access as the Access type
+    - Click Next and add the user to the Group just created
+    - Click Next and Create User
 
 9. Download the .csv containing the access key and secret access key.
-- note: it can only be downloaded once, do not share it with anyone
+    - note: it can only be downloaded once, do not share it with anyone
 
 #### Configure AWS Bucket 
 
