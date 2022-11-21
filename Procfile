@@ -1,1 +1,0 @@
-web: gunicorn goldish.wsgi:application
