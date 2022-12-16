@@ -3,7 +3,8 @@
 This is an E-Commerce website that focuses on selling simple and fine gold jewelry for everyday use.
 It is designed and developed by Kristina Bogdanovic. For educational purposes only.
 
-[View Live Website](https://kb-goldish.herokuapp.com/)
+[View Live Website](https://goldish.onrender.com) - Update 12/2022: redeployed on [Render](https://render.com
+)
 
 ![Responsive](media/readme/goldish-responsive.png)
 
